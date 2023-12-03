@@ -1,0 +1,2094 @@
+{
+    "loglevel": 100,
+    "BubakLocations": [
+        {
+            "name": "Elevator Factory",          
+
+
+
+
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3712.129883 54.830872 1277.865723",
+                "3693.322021 54.839378 1293.981567",
+                "3734.916504 56.029408 1275.847900",
+                "3708.183838 54.971153 1299.040405",
+                "3742.407959 54.817661 1288.516724",
+                "3697.298096 54.861813 1261.517334"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "ATP dogs",
+           
+
+            "triggerpos": "3826.171875 45.564274 1195.514282",
+
+
+
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3824.504639 45.557877 1195.874878",
+                "3853.421143 45.579399 1191.423950"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Dog_Red",
+                "Mutant_XZ_Dog_Brown",
+                "Mutant_XZ_Dog_Fur",
+                "Mutant_XZ_Dog_White"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Derevnya pod loshinoi",
+           
+
+            "triggerpos": "4418.288574 68.353966 1144.061646",
+
+
+
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4435.760742 68.357880 1139.796875",
+                "4411.596680 68.357880 1140.079590"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Fresh1",
+                "Mutant_XZ_Fresh2",
+                "Mutant_XZ_Fresh3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "JD Nasip posle tunnelya",
+           
+
+            "triggerpos": "4634.239258 70.024895 1563.946899",
+
+
+
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4640.203125 68.240959 1585.246338",
+                "4671.686035 69.222450 1582.314453"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Fresh1",
+                "Mutant_XZ_Fresh2",
+                "Mutant_XZ_Fresh3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Arhianomaly Severnaya Loshina",
+           
+
+            "triggerpos": "4585.355957 76.735329 2473.325684",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4588.962891 77.257355 2467.743408",
+                "4578.628906 78.316620 2445.503662"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "SFP_Mutant_Snork"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Temnaya Loshina",
+           
+
+            "triggerpos": "4748.357910 68.024895 2268.273438",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4787.796875 68.027878 2275.270508",
+                "4760.209961 68.027878 2293.290771"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Perehod v loshina to dolina",
+           
+
+            "triggerpos": "4898.357422 72.456932 1947.723755",
+
+
+            "triggerradius": 200.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4883.616211 72.543350 1930.622681",
+                "4914.610840 72.650093 1937.730957",
+                "4894.719238 72.413216 1951.914185"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Zombi_XZ_Novice1",
+                "Zombi_XZ_Novice2",
+                "Zombi_XZ_Novice3",
+                "Zombi_XZ_Novice4",
+                "Zombi_XZ_Novice5",
+                "Zombi_XZ_Novice6",
+                "Zombi_XZ_Novice7"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Dom v perehode Loshina dolina",
+           
+
+            "triggerpos": "5257.800293 72.452629 1903.888184",
+
+
+
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "5270.247070 72.431984 1891.637451",
+                "5250.807129 72.490570 1897.664795"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Zombi_XZ_Novice1",
+                "Zombi_XZ_Novice2",
+                "Zombi_XZ_Novice3",
+                "Zombi_XZ_Novice4",
+                "Zombi_XZ_Novice5",
+                "Zombi_XZ_Novice6",
+                "Zombi_XZ_Novice7"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Tunnel-perehod loshina dolina",
+           
+
+            "triggerpos": "5723.461914 92.980247 1714.242554",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "5743.953613 85.327103 1707.767090",
+                "5732.175781 87.612480 1735.170532"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Fresh1",
+                "Mutant_XZ_Fresh2",
+                "Mutant_XZ_Fresh3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Tunnel v loshinu",
+           
+
+            "triggerpos": "5970.804199 71.225014 1329.511353",
+
+
+
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "5977.767578 71.499329 1309.609985",
+                "5966.034180 71.737488 1325.401733",
+                "5948.655762 72.946915 1314.340820"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Dog_Red",
+                "Mutant_XZ_Dog_White",
+                "Mutant_XZ_Dog_Fur",
+                "Mutant_XZ_Dog_Brown"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Tunnel v loshinu 2",
+           
+
+            "triggerpos": "4825.600098 68.607323 906.085754",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4840.406738 68.404961 920.366272",
+                "4827.378906 69.489532 886.625305"
+            ],
+            "spawnradius": 20.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Zombi_XZ_Novice1",
+                "Zombi_XZ_Novice2",
+                "Zombi_XZ_Novice3",
+                "Zombi_XZ_Novice4",
+                "Zombi_XZ_Novice5",
+                "Zombi_XZ_Novice6",
+                "Zombi_XZ_Novice7"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Zapadnee svobodi polyana sobak",
+           
+
+            "triggerpos": "4769.671875 77.662437 2919.206055",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4783.205566 76.577682 2912.631592",
+                "4752.862793 74.646164 2949.064941"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Dog_Red",
+                "Mutant_XZ_Dog_White",
+                "Mutant_XZ_Dog_Fur",
+                "Mutant_XZ_Dog_Brown"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Loshina sobaki",
+           
+
+            "triggerpos": "4605.344238 84.243843 2399.599121",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4608.484375 85.334961 2413.113525",
+                "4636.011230 84.535530 2415.234375"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Dog_Red",
+                "Mutant_XZ_Dog_White",
+                "Mutant_XZ_Dog_Fur",
+                "Mutant_XZ_Dog_Brown"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Cerkovb v loshine",
+           
+
+            "triggerpos": "5794.774902 82.576256 1259.381714",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "5806.566406 82.530426 1276.049316",
+                "5798.631836 82.505646 1277.432129",
+                "5814.308594 82.487877 1271.261108"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Zombi_XZ_Novice1",
+                "Zombi_XZ_Novice2",
+                "Zombi_XZ_Novice3",
+                "Zombi_XZ_Novice4",
+                "Zombi_XZ_Novice5",
+                "Zombi_XZ_Novice6",
+                "Zombi_XZ_Novice7"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Derevnya Izlomov",
+           
+
+            "triggerpos": "5573.954102 81.027191 1247.754272",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "5561.971680 81.132454 1239.429565",
+                "5599.937500 80.635101 1251.478516",
+                "5588.409180 80.947876 1279.828003",
+                "5571.721680 81.047668 1210.765137",
+                "5628.162109 80.080688 1229.236572"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Izlom1",
+                "Mutant_XZ_Izlom2",
+                "Mutant_XZ_Izlom3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Tunnel u nauki",
+           
+
+            "triggerpos": "5278.249023 88.382523 1425.364868",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "5269.640137 87.980080 1442.899902",
+                "5251.341309 87.223152 1421.062744"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 3,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Zombi_XZ_Novice1",
+                "Zombi_XZ_Novice2",
+                "Zombi_XZ_Novice3",
+                "Zombi_XZ_Novice4",
+                "Zombi_XZ_Novice5",
+                "Zombi_XZ_Novice6",
+                "Zombi_XZ_Novice7"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Tunnel u Nauki 2",
+           
+
+            "triggerpos": "5140.676270 90.417343 1495.367432",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "5134.056152 90.116158 1491.734741",
+                "5141.860352 90.126968 1514.737671",
+                "5163.642578 90.538620 1501.590454"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 4,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Zombi_XZ_Novice1",
+                "Zombi_XZ_Novice2",
+                "Zombi_XZ_Novice3",
+                "Zombi_XZ_Novice4",
+                "Zombi_XZ_Novice5",
+                "Zombi_XZ_Novice6",
+                "Zombi_XZ_Novice7"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Tunnel u Nauki 3",
+           
+
+            "triggerpos": "5217.198730 97.878487 1633.720337",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "5201.422363 97.584610 1634.822632",
+                "5232.154297 97.852547 1640.889648",
+                "5241.721680 97.366165 1655.873291"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Zombi_XZ_Novice1",
+                "Zombi_XZ_Novice2",
+                "Zombi_XZ_Novice3",
+                "Zombi_XZ_Novice4",
+                "Zombi_XZ_Novice5",
+                "Zombi_XZ_Novice6",
+                "Zombi_XZ_Novice7"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Perehod Kordon-Kishka",
+           
+
+            "triggerpos": "4132.645508 69.361977 1093.858521",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4122.022949 68.715477 1064.188477",
+                "4152.896484 69.461327 1078.862061",
+                "4138.734375 69.860840 1108.159058"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Nasip-Kordon",
+           
+
+            "triggerpos": "3764.406006 54.707855 1363.766968",
+
+
+
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3767.427979 54.792889 1370.982544",
+                "3756.161621 55.663918 1351.993042",
+                "3771.342529 54.857273 1342.211548"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 3,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Dog_Red",
+                "Mutant_XZ_Dog_White",
+                "Mutant_XZ_Dog_Fur",
+                "Mutant_XZ_Dog_Brown"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Dom gde lejal Lis",
+           
+
+            "triggerpos": "3848.030518 52.773548 1513.233765",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3846.811279 52.678665 1503.120850",
+                "3863.933594 53.226570 1534.735107",
+                "3833.231934 52.674168 1522.036011"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Dog_Red",
+                "Mutant_XZ_Dog_White",
+                "Mutant_XZ_Dog_Fur",
+                "Mutant_XZ_Dog_Brown"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Severnoye KPP",
+           
+
+            "triggerpos": "3738.833252 69.011696 1838.335205",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3721.348877 67.709084 1829.119751",
+                "3749.529297 67.780190 1830.830933",
+                "3739.205078 67.490036 1854.413696"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Zombi_XZ_Novice1",
+                "Zombi_XZ_Novice2",
+                "Zombi_XZ_Novice3",
+                "Zombi_XZ_Novice4",
+                "Zombi_XZ_Novice5",
+                "Zombi_XZ_Novice6",
+                "Zombi_XZ_Novice7"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Perehod Kordon-svalka mezhdu holmami",
+           
+
+            "triggerpos": "3543.757813 49.623489 1603.366333",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3582.632080 57.843788 1640.344238",
+                "3547.222168 49.752914 1596.465576",
+                "3541.777100 49.494286 1573.438721"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 4,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Arhianomaly vozle derevni novichkov",
+           
+
+            "triggerpos": "3535.104980 52.370861 1204.125122",
+
+
+
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3537.833252 48.285160 1185.192871",
+                "3562.337158 49.414448 1202.397705",
+                "3526.269043 56.127861 1214.600464"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 4,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Fresh1",
+                "Mutant_XZ_Fresh2",
+                "Mutant_XZ_Fresh3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Lager okolo JD",
+           
+
+            "triggerpos": "3996.767578 56.765415 1314.984619",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4004.172852 56.197269 1321.717407",
+                "3983.683838 58.284172 1316.472168"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 4,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Cat_Bayn1",
+                "Mutant_XZ_Cat_Bayn2",
+                "Mutant_XZ_Cat_Bayn3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Bashnya u Severnogo KPP",
+           
+
+            "triggerpos": "3924.790527 78.751701 1640.095459",
+
+
+            "triggerradius": 75.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3908.650146 79.197601 1636.998047",
+                "3940.647949 78.703995 1622.022583",
+                "3964.385986 81.239563 1656.623657"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Dog_Red",
+                "Mutant_XZ_Dog_White",
+                "Mutant_XZ_Dog_Fur",
+                "Mutant_XZ_Dog_Brown"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Perehod po JD v storonu bolot",
+           
+
+            "triggerpos": "3404.836670 85.463379 1408.049072",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3421.351074 85.255096 1404.374634",
+                "3413.605957 85.690109 1422.053955",
+                "3390.255127 87.027145 1422.420776"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Fresh1",
+                "Mutant_XZ_Fresh2",
+                "Mutant_XZ_Fresh3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Poezd Balota-Kordon",
+           
+
+            "triggerpos": "2992.723633 86.805542 1517.457642",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2990.257080 86.758614 1509.987671",
+                "2995.140381 86.976471 1521.542358",
+                "2991.202637 86.847755 1534.612183"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Zombi_XZ_Novice1",
+                "Zombi_XZ_Novice2",
+                "Zombi_XZ_Novice3",
+                "Zombi_XZ_Novice4",
+                "Zombi_XZ_Novice5",
+                "Zombi_XZ_Novice6",
+                "Zombi_XZ_Novice7"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Hutor na severo-vostoke bolot",
+           
+
+            "triggerpos": "749.425293 66.213402 1498.094727",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2753.692627 66.550102 1507.910889",
+                "2749.406006 66.242607 1484.953003",
+                "2759.783936 66.236259 1485.073120"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Fresh1",
+                "Mutant_XZ_Fresh2",
+                "Mutant_XZ_Fresh3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Mehdvor",
+           
+
+            "triggerpos": "2560.565430 66.358124 1314.625977",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2568.885986 66.560486 1300.639893",
+                "2587.409180 66.507210 1325.456055",
+                "2527.988770 66.395882 1325.902710"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Hutor na vostoke bolot",
+           
+
+            "triggerpos": "2642.899902 66.114891 871.706177",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2662.392822 66.037392 867.902649",
+                "2658.066650 65.977661 902.143372",
+                "2673.338379 65.840919 885.527832"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Fresh1",
+                "Mutant_XZ_Fresh2",
+                "Mutant_XZ_Fresh3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Cerkovb na bolotah",
+           
+
+            "triggerpos": "2438.769775 64.201965 888.248840",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2436.860107 64.202888 891.351074"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 1,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "SFP_ANM_Krovosos"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Hutor Zapadnee cerkvi",
+           
+
+            "triggerpos": "2170.668945 66.287926 817.183044",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2177.164063 66.271049 808.740051",
+                "2161.510010 65.893967 830.028687",
+                "2154.919922 65.735001 810.225098"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Fresh1",
+                "Mutant_XZ_Fresh2",
+                "Mutant_XZ_Fresh3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Polyana v centre bolot",
+           
+
+            "triggerpos": "2294.581543 64.606041 990.795471",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2312.921875 64.529968 978.243958",
+                "2266.239746 67.406357 972.827820",
+                "2243.680908 64.140793 967.928284"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Storojevaya vishka severo-zapad bolot",
+           
+
+            "triggerpos": "1849.526489 64.737503 1076.375732",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "1827.424194 64.276604 1081.683960",
+                "1867.725830 64.541473 1096.659180",
+                "1851.770264 64.646660 1068.952637"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Fresh1",
+                "Mutant_XZ_Fresh2",
+                "Mutant_XZ_Fresh3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Podval bolotnogo doctora",
+           
+
+            "triggerpos": "1951.275269 64.647041 1602.100342",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "1951.275269 64.647041 1602.100342"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 1,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "SFP_ANM_Krovosos"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Lodochnaya na severo-zapade bolot",
+           
+
+            "triggerpos": "1955.873291 64.945244 1469.509766",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "1958.327515 66.201576 1485.902832",
+                "1964.382202 64.937721 1473.373169",
+                "1934.473022 64.514900 1473.489258"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Gruda hlama na severe bolot",
+           
+
+            "triggerpos": "2240.465332 65.546227 1416.107666",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2218.656250 66.899078 1414.159180",
+                "2254.636475 64.411369 1413.447510",
+                "2234.062256 64.950134 1383.119385"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Perehod Bolota-Agroprom",
+           
+
+            "triggerpos": "2664.847656 97.173126 1825.830200",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2672.652344 96.304047 1818.395630",
+                "2641.824951 93.866592 1800.237671"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Tropa Bolota-Agroprom",
+           
+
+            "triggerpos": "2289.499512 76.853081 1848.416504",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2280.132324 75.248001 1833.425049",
+                "2305.702393 79.999420 1857.497070",
+                "2275.857178 73.092743 1880.133057"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 7,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Zombi_XZ_Novice1",
+                "Zombi_XZ_Novice2",
+                "Zombi_XZ_Novice3",
+                "Zombi_XZ_Novice4",
+                "Zombi_XZ_Novice5",
+                "Zombi_XZ_Novice6",
+                "Zombi_XZ_Novice7"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Medvejbe Logovo",
+           
+
+            "triggerpos": "2027.344971 65.387886 1850.970215",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2027.344971 65.387886 1850.970215"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 2,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Animal_UrsusArctos"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Holm vostochnee Dolga",
+           
+
+            "triggerpos": "2489.240234 82.841545 2252.900391",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2518.858643 82.972221 2254.904541",
+                "2514.052246 82.527313 2244.755615",
+                "2524.716309 82.682892 2250.460693"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Pse_Dog1",
+                "Mutant_XZ_Pse_Dog2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Les Zapadnee dolga1",
+           
+
+            "triggerpos": "1918.275146 75.005936 2096.337891",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "1908.397095 74.984016 2104.753174",
+                "1904.725952 74.880470 2117.172607"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Les Zapadnee dolga2",
+           
+
+            "triggerpos": "1852.493042 77.610542 2285.593262",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "1859.344238 77.422676 2283.253906",
+                "1841.375488 75.701447 2262.903320"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Les zapadnee dolga3",
+           
+
+            "triggerpos": "1776.766968 74.528831 2587.028564",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "1783.149292 74.993752 2598.114746",
+                "1790.652100 73.995270 2561.168701"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Les zapandee Dolga4",
+           
+
+            "triggerpos": "1950.098755 78.607384 2854.646729",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "1950.098755 78.607384 2854.646729"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 2,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Animal_UrsusArctos"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Musor na severe ot Dolga",
+           
+
+            "triggerpos": "2223.019287 72.007057 2517.750732",
+
+
+
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2225.781006 73.436035 2527.219482",
+                "2223.260986 71.617210 2514.918945",
+                "2242.803711 70.964371 2511.244629"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Tushkano1",
+                "Mutant_XZ_Tushkano2",
+                "Mutant_XZ_Tushkano3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Stroenie na severo-zapade Agroproma",
+           
+
+            "triggerpos": "2345.462891 68.527644 2619.081299",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2341.016113 68.529045 2627.002686"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 1,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "SFP_ANM_Krovosos"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Vhod Agroprom",
+           
+
+            "triggerpos": "2501.029297 68.513962 2593.689941",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2529.662842 68.658798 2609.076660",
+                "2527.330078 68.884308 2582.842773",
+                "2519.160156 68.514893 2599.553467"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "SFP_Mutant_Snork"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Centr Agroproma",
+           
+
+            "triggerpos": "2441.205078 68.514893 2567.969971",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2446.022705 68.513962 2562.397949",
+                "2464.991211 68.526520 2572.859131"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 2,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Burer1",
+                "Mutant_XZ_Burer2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Domik na bolotah agroproma",
+           
+
+            "triggerpos": "2115.468994 73.072685 2583.667480",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2115.468994 73.072685 2583.667480"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 1,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "SFP_ANM_Krovosos"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Logovo krovososa",
+           
+
+            "triggerpos": "2106.800293 71.034599 2732.076904",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2082.553711 71.732338 2731.886230"
+            ],
+            "spawnradius": 1.0,
+            "bubaknum": 1,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "SFP_ANM_Krovosos"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Severnaya ot agroproma polyana",
+           
+
+            "triggerpos": "2284.643066 84.297760 2760.164063",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2297.061768 83.541573 2751.251465",
+                "2264.995117 82.863495 2726.240967",
+                "2290.334473 84.741913 2759.039063"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 3,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Pse_Dog1",
+                "Mutant_XZ_Pse_Dog2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Severnaya ot agroproma polyana2",
+           
+
+            "triggerpos": "2525.250488 91.427147 2730.306885",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2522.182617 91.468216 2743.807129",
+                "2521.525879 90.604202 2770.680908",
+                "2541.925537 89.842499 2765.956787"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 3,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Pse_Dog1",
+                "Mutant_XZ_Pse_Dog2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Perecrestok Agroproma",
+           
+
+            "triggerpos": "2665.484131 68.992851 2544.549561",
+
+
+            "triggerradius": 150.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "2646.208984 69.090935 2539.909912",
+                "2653.735596 68.987762 2550.547852"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 6,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Tushkano1",
+                "Mutant_XZ_Tushkano2",
+                "Mutant_XZ_Tushkano3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Btr v storonu svalki ot Agroproma",
+           
+
+            "triggerpos": "3094.766113 69.013512 2658.791016",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3094.091064 69.103218 2627.431885",
+                "3094.043701 69.105637 2627.368408",
+                "3094.554688 68.989845 2629.357910"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 4,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "SFP_Mutant_Snork"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Blockpost mezhdu Svalka-Agroprom",
+           
+
+            "triggerpos": "3271.381592 70.611595 2637.714600",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3260.992432 69.935677 2638.302490",
+                "3252.324219 69.291702 2646.589844",
+                "3278.608887 71.637154 2617.066406"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Fresh1",
+                "Mutant_XZ_Fresh2",
+                "Mutant_XZ_Fresh3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Lesnaya tropa mezhdu K S A",
+           
+
+            "triggerpos": "3371.103760 81.818985 2363.841553",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3383.078125 84.086899 2361.509521",
+                "3389.130371 81.791862 2384.244141"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Zavod mezhdu Svalkoi i Kordonom",
+           
+
+            "triggerpos": "3529.696289 88.072166 2173.775879",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3515.232910 88.310455 2185.028076",
+                "3563.305664 88.713860 2164.822754",
+                "3546.401611 88.071236 2203.221680"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 7,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Zombi_XZ_Novice1",
+                "Zombi_XZ_Novice2",
+                "Zombi_XZ_Novice3",
+                "Zombi_XZ_Novice4",
+                "Zombi_XZ_Novice5",
+                "Zombi_XZ_Novice6",
+                "Zombi_XZ_Novice7"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Anomalnaya kucha v storonu Agroproma",
+           
+
+            "triggerpos": "3409.831299 85.089401 2591.33837",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3441.001221 88.436989 2598.552002",
+                "3410.241699 84.864502 2616.318848",
+                "3365.573242 82.310783 2582.376953"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 3,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Pse_Dog1",
+                "Mutant_XZ_Pse_Dog2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Svalka Tehniki",
+           
+
+            "triggerpos": "3623.413818 64.931633 2440.286865",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3652.615723 64.945755 2450.686279",
+                "3652.798340 65.517769 2420.772705",
+                "3591.462891 65.034698 2421.141602"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Zombi_XZ_Novice1",
+                "Zombi_XZ_Novice2",
+                "Zombi_XZ_Novice3",
+                "Zombi_XZ_Novice4",
+                "Zombi_XZ_Novice5",
+                "Zombi_XZ_Novice6",
+                "Zombi_XZ_Novice7"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Holm Kordon-svalka",
+           
+
+            "triggerpos": "3888.310059 76.196274 2368.982178",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3869.605469 76.316872 2344.347900",
+                "3861.370850 68.033646 2380.743164"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Yugo-vostok svalki",
+           
+
+            "triggerpos": "4063.190674 58.524891 2530.532715",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4064.157471 58.796955 2512.429688",
+                "4069.167480 58.598209 2521.253418",
+                "4060.373535 61.914120 2546.964600"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Izlom1",
+                "Mutant_XZ_Izlom2",
+                "Mutant_XZ_Izlom3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Gora hlama naprotiv depo",
+           
+
+            "triggerpos": "3851.378418 88.240242 2724.452393",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3830.446533 87.071678 2744.290771",
+                "3821.776855 89.265518 2705.612793",
+                "3852.200439 88.424202 2719.519775"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 4,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Zombi_XZ_Novice1",
+                "Zombi_XZ_Novice2",
+                "Zombi_XZ_Novice3",
+                "Zombi_XZ_Novice4",
+                "Zombi_XZ_Novice5",
+                "Zombi_XZ_Novice6",
+                "Zombi_XZ_Novice7"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "baraholka",
+           
+
+            "triggerpos": "3825.485596 69.379761 2886.239258",
+
+
+            "triggerradius": 100.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3834.608398 67.870026 2889.937988",
+                "3816.406250 70.651573 2865.206787",
+                "3818.995117 68.318939 2845.216553"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Fresh1",
+                "Mutant_XZ_Fresh2",
+                "Mutant_XZ_Fresh3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Stalkerskiy lagerb",
+           
+
+            "triggerpos": "3982.411377 66.316437 2772.197510",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3983.593018 66.762085 2766.054932",
+                "3983.490234 67.678329 2785.98584",
+                "3977.126709 66.737206 2780.774902"
+            ],
+            "spawnradius": 120.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Boloto svalki",
+           
+
+            "triggerpos": "3852.236572 67.688232 2521.194580",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3852.236572 67.688232 2521.194580"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 1,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "SFP_ANM_Krovosos"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Perehod Svalka-Temnaya Dolina",
+           
+
+            "triggerpos": "4218.775879 75.631248 2787.482666",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4208.361816 75.960281 2790.707031",
+                "4215.918457 76.531746 2747.364502",
+                "4240.013672 75.803497 2761.503662"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Dog_Red",
+                "Mutant_XZ_Dog_White",
+                "Mutant_XZ_Dog_Fur",
+                "Mutant_XZ_Dog_Brown"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Derevnya v perehode Svalka-Dolina",
+           
+
+            "triggerpos": "4422.312012 73.277863 2691.385010",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4435.408691 73.316589 2700.949463",
+                "4406.189453 72.831535 2715.162598",
+                "4401.282715 73.517387 2687.601318"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Izlom1",
+                "Mutant_XZ_Izlom2",
+                "Mutant_XZ_Izlom3"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Kabani v perehode Svalka-Dolina",
+           
+
+            "triggerpos": "4119.667969 71.024002 2857.409668",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4061.465576 70.736328 2852.451416",
+                "4089.363525 71.798973 2847.780029"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 4,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Mutant_XZ_Boar1",
+                "Mutant_XZ_Boar2"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Krovosos v perehode Svalka-Dolina",
+           
+
+            "triggerpos": "4714.577148 71.865120 2841.962402",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4714.577148 71.865120 2841.962402"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 1,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "SFP_ANM_Krovosos"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Medved v lesu Kordon-temnaya dolina",
+           
+
+            "triggerpos": "4217.447266 87.648796 2135.631104",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "4217.447266 87.648796 2135.631104"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Animal_UrsusArctos"
+            ],
+            "bubakinventory": []
+        },
+        {
+            "name": "Oleni za neytralami",
+           
+
+            "triggerpos": "3627.780273 82.352951 1567.336548",
+
+
+            "triggerradius": 120.0,
+
+            "triggercylheight": 0.0,
+            "notification": "Ты пидар",
+            "notificationtime": 2,
+            "triggerdelay": 1200,
+            "spawnerpos": [
+                "3627.780273 82.352951 1567.336548",
+                "3638.487061 82.987427 1574.959351"
+            ],
+            "spawnradius": 30.0,
+            "bubaknum": 5,
+            "onlyfilluptobubaknum": 1,
+            "itemrandomdmg": 0,
+            "bubaci": [
+                "Animal_CervusElaphusF"
+            ],
+            "bubakinventory": []
+        }
+    ]
+}
