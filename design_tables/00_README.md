@@ -17,3 +17,7 @@ Sheets:
 - 09_Daily_Quests.csv
 - 10_Monetization_Offers.csv
 - 11_PvP_Rules.csv
+- 12_Heroes.csv
+- 13_Items.csv
+- 14_Equipment.csv
+- 15_Quest_Chains.csv

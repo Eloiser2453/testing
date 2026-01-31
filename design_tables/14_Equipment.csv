@@ -1,0 +1,13 @@
+equipment_id,equipment_name,slot,rarity,stat_bonus,level_req,upgrade_currency,upgrade_amount,source,notes
+eq_sword_iron,Iron Sword,weapon,Common,"atk:+8",1,gold,120,craft; dungeons,
+eq_axe_hunter,Hunter Axe,weapon,Common,"atk:+10; hp:+20",3,gold,180,craft; dungeons,
+eq_staff_ember,Ember Staff,weapon,Rare,"atk:+14; crit:+2%",6,gold,320,craft; gacha_items,
+eq_blade_shadow,Shadow Blade,weapon,Epic,"atk:+22; crit:+5%",10,gold,650,events,
+eq_shield_oak,Oak Shield,offhand,Common,"def:+10; hp:+30",2,gold,140,craft; dungeons,
+eq_tome_light,Tome of Light,offhand,Rare,"def:+6; heal:+6%",6,gold,300,events,
+eq_helm_bronze,Bronze Helm,head,Common,"def:+6; hp:+20",1,gold,100,craft; dungeons,
+eq_helm_wyrm,Wyrm Helm,head,Epic,"def:+14; hp:+80",12,gold,700,events,
+eq_armor_leather,Leather Armor,body,Common,"def:+12; hp:+40",2,gold,160,craft; dungeons,
+eq_armor_knight,Knight Armor,body,Rare,"def:+20; hp:+80",8,gold,400,craft; gacha_items,
+eq_boots_wind,Wind Boots,feet,Rare,"speed:+6; dodge:+2%",7,gold,320,events,
+eq_ring_ember,Ring of Ember,accessory,Legendary,"atk:+18; crit:+6%",15,gold,1200,season_rewards,

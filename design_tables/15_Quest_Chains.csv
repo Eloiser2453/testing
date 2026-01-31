@@ -1,0 +1,12 @@
+chain_id,step,quest_name,target_type,target_amount,reward,unlock_level,prereq_chain,notes
+chain_main_01,1,Enter the Dungeon,dungeon_runs,1,"gems:10; gold:200",1,,intro tutorial
+chain_main_01,2,Clear Floor 3,floor_clear,3,"wood:200; stone:200",2,chain_main_01,
+chain_main_01,3,Upgrade Town Hall to 2,building_upgrade,1,"gold:300; hero_xp:50",3,chain_main_01,
+chain_main_01,4,Recruit a Hero,open_chest,1,"gems:20; shard_token:30",3,chain_main_01,
+chain_main_01,5,Clear Floor 5,floor_clear,5,"chest:bronze; gold:500",5,chain_main_01,story beat 1
+chain_main_02,1,Unlock the Global Map,feature_unlock,1,"gems:30; gold:800",5,chain_main_01,
+chain_main_02,2,Win a PvP Raid,pvp_win,1,"pvp_token:20; gold:400",7,chain_main_02,
+chain_main_02,3,Reach Floor 10,floor_clear,10,"chest:silver; hero_xp:120",10,chain_main_02,story beat 2
+chain_main_03,1,Forge Your First Gear,craft_item,1,"stone:300; gold:600",8,chain_main_02,
+chain_main_03,2,Reach Floor 15,floor_clear,15,"chest:gold; gems:50",15,chain_main_03,story beat 3
+chain_main_03,3,Defeat Floor 20 Boss,floor_clear,20,"chest:premium; gems:100",20,chain_main_03,goal milestone

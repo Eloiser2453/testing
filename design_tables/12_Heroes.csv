@@ -1,0 +1,11 @@
+hero_id,hero_name,rarity,role,element,base_hp,base_atk,base_def,skill_summary,unlock_source,notes
+h001,Stoneguard,Common,Tank,Earth,220,18,22,"Taunt and shield allies",tutorial,starter hero
+h002,Firebrand,Common,DPS,Fire,160,28,12,"Burning single target",gacha_basic,
+h003,Windrunner,Common,Support,Air,150,20,14,"Speed buff team",gacha_basic,
+h004,Riverseer,Rare,Healer,Water,170,18,16,"Heal and cleanse",gacha_basic,
+h005,Shadowblade,Rare,DPS,Dark,155,32,12,"Backstab crit",gacha_basic,
+h006,Ironpriest,Rare,Support,Light,180,20,18,"Barrier and regen",gacha_basic,
+h007,Stormcaller,Epic,DPS,Air,170,40,14,"Chain lightning",gacha_premium,
+h008,Gravewarden,Epic,Tank,Dark,260,22,28,"Damage share and lifesteal",gacha_premium,
+h009,Sunforged,Legendary,DPS,Light,200,50,18,"Burst and self-buff",gacha_premium,
+h010,Tidebreaker,Legendary,Tank,Water,280,24,30,"Wave shield and counter",gacha_premium,
