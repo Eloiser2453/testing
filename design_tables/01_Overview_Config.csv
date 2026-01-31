@@ -1,1 +1,14 @@
 category,parameter,value,unit,notes
+session,target_session_min,12,minutes,aim for 10-15 minute sessions
+session,daily_time_budget,40,minutes,2-3 short sessions per day
+stamina,regen_rate,1,per 6 min,1 stamina every 6 minutes
+stamina,daily_free_stamina,60,stamina,from daily quests and login
+progression,target_days_to_floor_20,14,days,steady two-week climb
+progression,soft_wall_interval,5,floors,add new mechanics every 5 floors
+gacha,free_pull_cooldown,24,hours,one free bronze pull per day
+gacha,pity_carryover,1,boolean,pity carries between banners
+base,max_construction_slots,2,slots,unlocked by town hall levels
+pvp,protection_level,6,player_level,new players protected
+pvp,resource_loss_cap,15,percent,cap per raid
+economy,hard_currency_daily_free,20,gems,dailies + calendar rewards
+economy,soft_currency_per_run,80,gold,baseline at floor 1-5

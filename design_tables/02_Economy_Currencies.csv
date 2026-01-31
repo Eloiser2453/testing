@@ -1,1 +1,10 @@
 currency_id,currency_name,source_list,sink_list,soft_cap,notes
+gold,Gold,dungeons; quests; base income,buildings; upgrades; crafting,500000,primary soft currency
+gems,Gems,events; offers; dailies,gacha; speedups; bundles,99999,hard currency
+stamina,Stamina,regen; dailies,dungeons; pvp raids,200,energy for activities
+wood,Wood,dungeons; lumberyard,buildings; crafting,100000,base material
+stone,Stone,dungeons; quarry,buildings; crafting,100000,base material
+iron,Iron,dungeons; mine; deep floors,advanced buildings; gear,50000,mid material
+hero_xp,Hero XP,dungeons; items; quests,hero leveling,99999,hero experience points
+shard_token,Shard Tokens,duplicate heroes,hero ascension,99999,used for star ups
+pvp_token,PvP Tokens,pvp wins,pvp shop,20000,pvp reward currency

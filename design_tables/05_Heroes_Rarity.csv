@@ -1,1 +1,5 @@
 rarity,drop_rate_base,shards_to_unlock,shards_per_duplicate,level_cap,star_max,base_power_multiplier,notes
+Common,0.70,20,5,30,5,1.00,starter pool and tutorials
+Rare,0.22,40,10,40,5,1.20,main collection
+Epic,0.07,80,20,50,5,1.50,core team anchors
+Legendary,0.01,160,40,60,5,2.00,rare chase heroes
