@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DnD Atlas — виртуальный стол для игры</title>
+    <meta
+      name="description"
+      content="DnD Atlas — сайт для совместной игры в Dungeons & Dragons онлайн: комнаты, карты, туман войны и броски кубов."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#">DnD Atlas</a>
+        <nav class="nav">
+          <a href="#features">Возможности</a>
+          <a href="#workflow">Как работает</a>
+          <a href="#pricing">Тарифы</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="btn small ghost" href="#start">Создать комнату</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow">Виртуальный стол для DnD</span>
+            <h1>Соберите отряд и откройте кампанию за 60 секунд</h1>
+            <p class="lead">
+              DnD Atlas — минималистичный, быстрый и удобный VTT. Создавайте комнаты,
+              загружайте карты, включайте туман войны и бросайте кубы вместе с
+              друзьями из любой точки мира.
+            </p>
+            <div class="cta">
+              <a class="btn primary" href="#start">Создать комнату</a>
+              <button class="btn ghost" id="roll-d20" type="button">Бросить d20</button>
+            </div>
+            <p class="dice-result" id="dice-result" aria-live="polite">
+              Готовы к первому броску?
+            </p>
+            <div class="stats">
+              <div>
+                <strong>5 мин</strong>
+                <span>на подготовку</span>
+              </div>
+              <div>
+                <strong>0</strong>
+                <span>установок</span>
+              </div>
+              <div>
+                <strong>24/7</strong>
+                <span>доступ к комнате</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-hidden="true">
+            <div class="table-ui">
+              <div class="table-top">
+                <span class="tag">Комната: Порт Невермор</span>
+                <span class="status">В сети: 5 игроков</span>
+              </div>
+              <div class="map-preview">
+                <div class="map-grid"></div>
+                <div class="token token-a">Элдрин</div>
+                <div class="token token-b">Мира</div>
+                <div class="token token-c">Кара</div>
+                <div class="fog"></div>
+              </div>
+              <div class="table-actions">
+                <button class="pill" type="button">Туман войны</button>
+                <button class="pill" type="button">Инициатива</button>
+                <button class="pill" type="button">Лут</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Все, что нужно для сессии</h2>
+            <p>Фокус на игре, а не на настройке. Инструменты Мастера и игроков в одном окне.</p>
+          </div>
+          <div class="grid features">
+            <article class="card">
+              <h3>Комнаты за минуту</h3>
+              <p>Создайте комнату, пригласите игроков по ссылке и начните сессию без регистрации.</p>
+            </article>
+            <article class="card">
+              <h3>Карты и сцены</h3>
+              <p>Перетаскивайте карты, масштабируйте, добавляйте слои и сцены для быстрого перехода.</p>
+            </article>
+            <article class="card">
+              <h3>Туман войны</h3>
+              <p>Открывайте области карты по ходу исследования, держите сюрпризы под контролем.</p>
+            </article>
+            <article class="card">
+              <h3>Броски кубов</h3>
+              <p>Встроенные d4–d100, формулы и журнал бросков для прозрачности каждого действия.</p>
+            </article>
+            <article class="card">
+              <h3>Наборы Мастера</h3>
+              <p>Заметки, списки инициативы, быстрые справки по правилам и трекинг условий.</p>
+            </article>
+            <article class="card">
+              <h3>Галерея токенов</h3>
+              <p>Выбирайте токены персонажей и монстров, выделяйте их цветом и метками.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="workflow" class="section alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Как это работает</h2>
+            <p>От идеи до первой сцены — всего три шага.</p>
+          </div>
+          <div class="grid steps">
+            <div class="step">
+              <span class="step-index">1</span>
+              <h3>Создайте комнату</h3>
+              <p>Введите название, выберите сетку и настройте видимость карты.</p>
+            </div>
+            <div class="step">
+              <span class="step-index">2</span>
+              <h3>Пригласите игроков</h3>
+              <p>Ссылка работает сразу. Игроки заходят с телефона, планшета или ПК.</p>
+            </div>
+            <div class="step">
+              <span class="step-index">3</span>
+              <h3>Проведите сессию</h3>
+              <p>Управляйте инициативой, бросайте кубы, раскрывайте туман войны.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="start" class="section">
+        <div class="container">
+          <div class="cta-banner">
+            <div>
+              <h2>Готовы к приключению?</h2>
+              <p>Запустите первую комнату бесплатно и посмотрите демо за пару минут.</p>
+            </div>
+            <div class="cta-group">
+              <a class="btn primary" href="#">Запустить демо</a>
+              <a class="btn ghost" href="#pricing">Сравнить тарифы</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="section alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Тарифы для любой группы</h2>
+            <p>Начните бесплатно, переходите на расширенные инструменты по мере роста кампании.</p>
+          </div>
+          <div class="grid pricing">
+            <article class="card">
+              <h3>Старт</h3>
+              <p class="price">0 ₽</p>
+              <ul>
+                <li>1 активная комната</li>
+                <li>Базовые карты и токены</li>
+                <li>Броски кубов и чат</li>
+              </ul>
+              <a class="btn ghost full" href="#">Выбрать</a>
+            </article>
+            <article class="card highlight">
+              <h3>Гильдия</h3>
+              <p class="price">590 ₽ / мес</p>
+              <ul>
+                <li>До 10 активных комнат</li>
+                <li>Неограниченные сцены</li>
+                <li>Расширенный туман войны</li>
+                <li>Заметки Мастера и журнал</li>
+              </ul>
+              <a class="btn primary full" href="#">Попробовать 14 дней</a>
+            </article>
+            <article class="card">
+              <h3>Стая</h3>
+              <p class="price">1 990 ₽ / мес</p>
+              <ul>
+                <li>Комнаты для нескольких кампаний</li>
+                <li>Совместные материалы Мастеров</li>
+                <li>Приоритетный доступ к новинкам</li>
+              </ul>
+              <a class="btn ghost full" href="#">Связаться</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Частые вопросы</h2>
+            <p>Короткие ответы, чтобы вы быстрее начали игру.</p>
+          </div>
+          <div class="grid faq">
+            <article class="card">
+              <h3>Нужна ли регистрация игрокам?</h3>
+              <p>Нет. Игроки заходят по ссылке и сразу видят стол.</p>
+            </article>
+            <article class="card">
+              <h3>Можно ли импортировать свои карты?</h3>
+              <p>Да, поддерживаются изображения PNG и JPG, масштаб настраивается вручную.</p>
+            </article>
+            <article class="card">
+              <h3>Как работает туман войны?</h3>
+              <p>Мастер открывает области кистью или формами, можно сохранять пресеты.</p>
+            </article>
+            <article class="card">
+              <h3>Есть ли мобильная версия?</h3>
+              <p>Да, интерфейс адаптирован под планшеты и телефоны.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>DnD Atlas</strong>
+          <p>Совместные приключения, где бы вы ни были.</p>
+        </div>
+        <div>
+          <p class="footer-title">Продукт</p>
+          <ul>
+            <li><a href="#features">Возможности</a></li>
+            <li><a href="#pricing">Тарифы</a></li>
+            <li><a href="#start">Демо</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Контакты</p>
+          <ul>
+            <li>hello@dndatlas.example</li>
+            <li>Discord: DnDAtlas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 DnD Atlas. Все права защищены.</span>
+        <span>Сделано для игр Dungeons & Dragons.</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
