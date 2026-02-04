@@ -21,8 +21,10 @@
       <div class="container header-inner">
         <a class="logo" href="#">DnD Atlas</a>
         <nav class="nav">
+          <a href="rooms.html">Комнаты</a>
           <a href="#features">Возможности</a>
-          <a href="#workflow">Как работает</a>
+          <a href="#master">Кабинет мастера</a>
+          <a href="#interface">Интерфейс</a>
           <a href="#pricing">Тарифы</a>
           <a href="#faq">FAQ</a>
         </nav>
@@ -148,6 +150,156 @@
         </div>
       </section>
 
+      <section id="master" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Личный кабинет мастера</h2>
+            <p>Управляйте сценами, заметками и ресурсами кампании в одном месте.</p>
+          </div>
+          <div class="master-grid">
+            <div class="master-content">
+              <ul class="master-list">
+                <li>
+                  <strong>Журнал кампании.</strong>
+                  Хронология событий, NPC и ключевые решения отряда.
+                </li>
+                <li>
+                  <strong>Сцены и карты.</strong>
+                  Быстрый переключатель локаций с заметками и ссылками на материалы.
+                </li>
+                <li>
+                  <strong>Инструменты мастера.</strong>
+                  Инициатива, условия, сокрытые броски и подсказки для боёв.
+                </li>
+                <li>
+                  <strong>Библиотека ассетов.</strong>
+                  Папки для карт, токенов, музыки и раздаточных материалов.
+                </li>
+              </ul>
+              <div class="cta-group">
+                <a class="btn primary" href="rooms.html">Открыть кабинет</a>
+                <a class="btn ghost" href="#interface">Посмотреть интерфейс</a>
+              </div>
+            </div>
+            <div class="master-panel" aria-hidden="true">
+              <div class="master-panel-header">
+                <div>
+                  <span class="panel-title">Кабинет мастера</span>
+                  <p class="panel-subtitle">Кампания: «Пепельные моря»</p>
+                </div>
+                <span class="panel-badge">Сессия сегодня</span>
+              </div>
+              <div class="master-panel-body">
+                <div class="master-widget">
+                  <h4>Заметки</h4>
+                  <ul>
+                    <li>Контракт с гильдией картографов</li>
+                    <li>Слабость босса: колодец света</li>
+                    <li>NPC: капитан Мара</li>
+                  </ul>
+                </div>
+                <div class="master-widget">
+                  <h4>Сцены</h4>
+                  <div class="chip-row">
+                    <span class="chip active">Порт Невермор</span>
+                    <span class="chip">Крипта</span>
+                    <span class="chip">Палуба «Скитальца»</span>
+                  </div>
+                </div>
+                <div class="master-widget">
+                  <h4>Подсказки боя</h4>
+                  <p>Инициатива: Элдрин 18, Кара 14, Гоблины 12.</p>
+                </div>
+              </div>
+              <div class="master-panel-footer">
+                <span>Подготовка сцен: 82%</span>
+                <span>Материалов: 36</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="interface" class="section alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Интерфейс игры с панелями</h2>
+            <p>Быстрый доступ к сценам, журналу и чату — всё рядом с картой.</p>
+          </div>
+          <div class="interface-mock" aria-hidden="true">
+            <div class="interface-top">
+              <div class="interface-brand">
+                <span class="panel-title">DnD Atlas</span>
+                <span class="panel-subtitle">Сцена: Заброшенный храм</span>
+              </div>
+              <div class="interface-actions">
+                <span class="pill">Сетка</span>
+                <span class="pill">Свет</span>
+                <span class="pill">Музыка</span>
+              </div>
+            </div>
+            <div class="interface-body">
+              <aside class="side-panel">
+                <div class="panel-section">
+                  <h4>Сцены</h4>
+                  <ul class="panel-list">
+                    <li class="active">Заброшенный храм</li>
+                    <li>Площадь рынка</li>
+                    <li>Подземелье</li>
+                  </ul>
+                </div>
+                <div class="panel-section">
+                  <h4>Токены</h4>
+                  <div class="token-stack">
+                    <span class="token-mini">Элдрин</span>
+                    <span class="token-mini">Мира</span>
+                    <span class="token-mini">Кара</span>
+                    <span class="token-mini enemy">Гоблин</span>
+                  </div>
+                </div>
+              </aside>
+              <div class="interface-map">
+                <div class="map-grid"></div>
+                <div class="map-token map-token-a">Элдрин</div>
+                <div class="map-token map-token-b">Мира</div>
+                <div class="map-token map-token-c">Кара</div>
+                <div class="map-token map-token-d enemy">Гоблин</div>
+                <div class="map-highlight"></div>
+                <div class="map-legend">
+                  <span>Туман: 42%</span>
+                  <span>Масштаб: 120%</span>
+                </div>
+              </div>
+              <aside class="side-panel right">
+                <div class="tab-row">
+                  <span class="tab active">Журнал</span>
+                  <span class="tab">Броски</span>
+                  <span class="tab">Чат</span>
+                </div>
+                <div class="log">
+                  <p><strong>Мира</strong> бросает d20 → 17 (Скрытность)</p>
+                  <p><strong>Гоблин</strong> бросает d20 → 8 (Проверка)</p>
+                  <p><strong>Кара</strong> применяет «Порыв ветра»</p>
+                </div>
+                <div class="quick-actions">
+                  <span class="chip">Инициатива</span>
+                  <span class="chip">Условия</span>
+                  <span class="chip">Сцены</span>
+                </div>
+              </aside>
+            </div>
+            <div class="interface-bottom">
+              <div class="chat-input">Напишите сообщение или /roll 1d20+3...</div>
+              <div class="initiative-track">
+                <span class="chip active">Элдрин 18</span>
+                <span class="chip">Кара 14</span>
+                <span class="chip">Гоблины 12</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="start" class="section">
         <div class="container">
           <div class="cta-banner">
@@ -242,7 +394,8 @@
         <div>
           <p class="footer-title">Продукт</p>
           <ul>
-            <li><a href="#features">Возможности</a></li>
+            <li><a href="rooms.html">Комнаты</a></li>
+            <li><a href="#master">Кабинет мастера</a></li>
             <li><a href="#pricing">Тарифы</a></li>
             <li><a href="#start">Демо</a></li>
           </ul>
