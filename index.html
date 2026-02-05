@@ -226,6 +226,12 @@
             <h2>Интерфейс игры с панелями</h2>
             <p>Быстрый доступ к сценам, журналу и чату — всё рядом с картой.</p>
           </div>
+          <div class="section-actions">
+            <button class="btn ghost small" type="button" data-open-table>
+              Открыть игровой стол (G)
+            </button>
+            <span class="hint">Esc — закрыть, G — открыть во весь экран.</span>
+          </div>
           <div class="interface-mock" aria-hidden="true">
             <div class="interface-top">
               <div class="interface-brand">
@@ -413,6 +419,91 @@
         <span>Сделано для игр Dungeons & Dragons.</span>
       </div>
     </footer>
+
+    <div class="table-overlay" id="table-overlay" aria-hidden="true">
+      <div class="table-overlay-content" role="dialog" aria-modal="true" aria-label="Игровой стол">
+        <div class="table-overlay-header">
+          <div>
+            <span class="panel-title">Игровой стол</span>
+            <p class="panel-subtitle">Горячая клавиша: G · Закрыть: Esc</p>
+          </div>
+          <button class="btn ghost small" type="button" data-close-table>Закрыть</button>
+        </div>
+        <div class="table-overlay-body">
+          <div class="interface-mock">
+            <div class="interface-top">
+              <div class="interface-brand">
+                <span class="panel-title">DnD Atlas</span>
+                <span class="panel-subtitle">Сцена: Заброшенный храм</span>
+              </div>
+              <div class="interface-actions">
+                <span class="pill">Сетка</span>
+                <span class="pill">Свет</span>
+                <span class="pill">Музыка</span>
+              </div>
+            </div>
+            <div class="interface-body">
+              <aside class="side-panel">
+                <div class="panel-section">
+                  <h4>Сцены</h4>
+                  <ul class="panel-list">
+                    <li class="active">Заброшенный храм</li>
+                    <li>Площадь рынка</li>
+                    <li>Подземелье</li>
+                  </ul>
+                </div>
+                <div class="panel-section">
+                  <h4>Токены</h4>
+                  <div class="token-stack">
+                    <span class="token-mini">Элдрин</span>
+                    <span class="token-mini">Мира</span>
+                    <span class="token-mini">Кара</span>
+                    <span class="token-mini enemy">Гоблин</span>
+                  </div>
+                </div>
+              </aside>
+              <div class="interface-map">
+                <div class="map-grid"></div>
+                <div class="map-token map-token-a">Элдрин</div>
+                <div class="map-token map-token-b">Мира</div>
+                <div class="map-token map-token-c">Кара</div>
+                <div class="map-token map-token-d enemy">Гоблин</div>
+                <div class="map-highlight"></div>
+                <div class="map-legend">
+                  <span>Туман: 42%</span>
+                  <span>Масштаб: 120%</span>
+                </div>
+              </div>
+              <aside class="side-panel right">
+                <div class="tab-row">
+                  <span class="tab active">Журнал</span>
+                  <span class="tab">Броски</span>
+                  <span class="tab">Чат</span>
+                </div>
+                <div class="log">
+                  <p><strong>Мира</strong> бросает d20 → 17 (Скрытность)</p>
+                  <p><strong>Гоблин</strong> бросает d20 → 8 (Проверка)</p>
+                  <p><strong>Кара</strong> применяет «Порыв ветра»</p>
+                </div>
+                <div class="quick-actions">
+                  <span class="chip">Инициатива</span>
+                  <span class="chip">Условия</span>
+                  <span class="chip">Сцены</span>
+                </div>
+              </aside>
+            </div>
+            <div class="interface-bottom">
+              <div class="chat-input">Напишите сообщение или /roll 1d20+3...</div>
+              <div class="initiative-track">
+                <span class="chip active">Элдрин 18</span>
+                <span class="chip">Кара 14</span>
+                <span class="chip">Гоблины 12</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
