@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Личный кабинет мастера — DnD Atlas</title>
+    <meta
+      name="description"
+      content="Личный кабинет мастера DnD Atlas: управление кампаниями, сценами, материалами и сессиями."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">DnD Atlas</a>
+        <nav class="nav">
+          <a href="index.html">Главная</a>
+          <a href="rooms.html">Комнаты</a>
+          <a href="#overview">Обзор</a>
+          <a href="#tools">Инструменты</a>
+          <a href="#library">Библиотека</a>
+          <a href="index.html#faq">FAQ</a>
+        </nav>
+        <a class="btn small ghost" href="#tools">Новая сцена</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-grid">
+          <div>
+            <span class="eyebrow">Кабинет мастера</span>
+            <h1>Личный кабинет мастера</h1>
+            <p class="lead">
+              Планируйте сессии, управляйте сценами, храните материалы и
+              отслеживайте прогресс всех кампаний в одном окне.
+            </p>
+            <div class="cta">
+              <a class="btn primary" href="#tools">Создать сцену</a>
+              <a class="btn ghost" href="rooms.html">Перейти к комнатам</a>
+            </div>
+          </div>
+          <div class="summary-card">
+            <span class="tag">Профиль мастера</span>
+            <h3>Элира Торн</h3>
+            <p class="room-details">Кампаний: 3 · Комнат: 7 · Игроков: 14</p>
+            <div class="room-meta">
+              <span>Сессий в этом месяце: 6</span>
+              <span>Онлайн</span>
+            </div>
+            <div class="progress">
+              <span style="width: 78%"></span>
+            </div>
+            <p class="room-details">Готовность следующей сессии: 78%</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Обзор текущих дел</h2>
+            <p>Главные показатели, ближайшие задачи и быстрый доступ к ключевым инструментам.</p>
+          </div>
+          <div class="dashboard-grid">
+            <aside class="dashboard-sidebar">
+              <div class="card profile-card">
+                <div class="profile-header">
+                  <div>
+                    <span class="panel-title">Элира Торн</span>
+                    <p class="panel-subtitle">Мастер кампаний</p>
+                  </div>
+                  <span class="panel-badge">Уровень 12</span>
+                </div>
+                <div class="profile-stats">
+                  <div>
+                    <strong>3</strong>
+                    <span>кампании</span>
+                  </div>
+                  <div>
+                    <strong>7</strong>
+                    <span>комнат</span>
+                  </div>
+                  <div>
+                    <strong>14</strong>
+                    <span>игроков</span>
+                  </div>
+                </div>
+                <div class="progress">
+                  <span style="width: 64%"></span>
+                </div>
+                <p class="room-details">Подготовка сцен: 64%</p>
+              </div>
+              <div class="card">
+                <h3>Быстрые действия</h3>
+                <div class="chip-row">
+                  <span class="chip active">Новая сцена</span>
+                  <span class="chip">Скрытый бросок</span>
+                  <span class="chip">Записать NPC</span>
+                  <span class="chip">Пригласить игроков</span>
+                </div>
+              </div>
+              <div class="card">
+                <h3>Навигация</h3>
+                <ul class="menu-list">
+                  <li class="active">Обзор</li>
+                  <li>Сцены</li>
+                  <li>Карта мира</li>
+                  <li>Журнал</li>
+                  <li>Настройки кампании</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Напоминания</h3>
+                <ul class="activity-list">
+                  <li>
+                    <strong>Обновить карту порта</strong>
+                    <span>До сессии осталось 4 часа</span>
+                  </li>
+                  <li>
+                    <strong>Собрать листы NPC</strong>
+                    <span>5 карточек на проверке</span>
+                  </li>
+                  <li>
+                    <strong>Подготовить музыку</strong>
+                    <span>Нужен плейлист для боя</span>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+            <div class="dashboard-main">
+              <div class="widget-grid">
+                <article class="card">
+                  <h3>Активные комнаты</h3>
+                  <div class="mini-list">
+                    <div class="mini-item">
+                      <div>
+                        <strong>Порт Невермор</strong>
+                        <div>Сцена: Доковый квартал</div>
+                      </div>
+                      <span class="room-status live">В процессе</span>
+                    </div>
+                    <div class="mini-item">
+                      <div>
+                        <strong>Лес Серебряных Волков</strong>
+                        <div>Сцена: Затерянный лагерь</div>
+                      </div>
+                      <span class="room-status prep">Подготовка</span>
+                    </div>
+                    <div class="mini-item">
+                      <div>
+                        <strong>Глубины Карага</strong>
+                        <div>Сцена: Храм эха</div>
+                      </div>
+                      <span class="room-status pause">Пауза</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="card">
+                  <h3>Прогресс кампаний</h3>
+                  <div class="progress-group">
+                    <div class="progress-row">
+                      <span>Пепельные моря</span>
+                      <div class="progress">
+                        <span style="width: 64%"></span>
+                      </div>
+                    </div>
+                    <div class="progress-row">
+                      <span>Осколки Эфира</span>
+                      <div class="progress">
+                        <span style="width: 38%"></span>
+                      </div>
+                    </div>
+                    <div class="progress-row">
+                      <span>Тени Хальдора</span>
+                      <div class="progress">
+                        <span style="width: 82%"></span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <article class="card">
+                <h3>Текущая сессия</h3>
+                <div class="mini-list">
+                  <div class="mini-item">
+                    <div>
+                      <strong>Пепельные моря</strong>
+                      <div>Сегодня, 19:30 · «Вечерняя гавань»</div>
+                    </div>
+                    <span class="chip">5 игроков</span>
+                  </div>
+                  <div class="mini-item">
+                    <div>
+                      <strong>Главные задачи</strong>
+                      <div>Свет, музыка, диалоги NPC</div>
+                    </div>
+                    <span class="chip">3 пункта</span>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <h3>Заметки мастера</h3>
+                <ul class="note-list">
+                  <li>Скрытая тропа открывается после решения загадки со статуей.</li>
+                  <li>Капитан Мара должна намекнуть о культе в порту.</li>
+                  <li>Гоблины боятся света, снизить им инициативу на 2.</li>
+                  <li>Подготовить случайные встречи в доках.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tools" class="section alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Инструменты мастера</h2>
+            <p>Соберите бой, сцену и атмосферу в одном наборе.</p>
+          </div>
+          <div class="grid features">
+            <article class="card">
+              <h3>Трекер инициативы</h3>
+              <p>Сортировка по броскам, состояния и быстрая фиксация условий.</p>
+            </article>
+            <article class="card">
+              <h3>Сцены и слои</h3>
+              <p>Несколько карт на сцену, слой заметок и скрытые зоны.</p>
+            </article>
+            <article class="card">
+              <h3>Скрытые броски</h3>
+              <p>Проверки за экраном, журнал результатов и мгновенные подсказки.</p>
+            </article>
+            <article class="card">
+              <h3>Генератор NPC</h3>
+              <p>Быстрые портреты, мотивации и заметки для встреч на лету.</p>
+            </article>
+            <article class="card">
+              <h3>Музыкальные сцены</h3>
+              <p>Подключайте плейлисты, меняйте настроение одним кликом.</p>
+            </article>
+            <article class="card">
+              <h3>Справки правил</h3>
+              <p>Сводки по условиям, заклинаниям и предметам прямо в кабинете.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="library" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Библиотека материалов</h2>
+            <p>Раздаточные материалы, карты и токены для каждой кампании.</p>
+          </div>
+          <div class="library-grid">
+            <article class="card resource-item">
+              <h3>Карты</h3>
+              <p class="room-details">47 файлов · 6 коллекций</p>
+              <div class="resource-meta">
+                <span>Последнее обновление: вчера</span>
+                <span>2,4 ГБ</span>
+              </div>
+            </article>
+            <article class="card resource-item">
+              <h3>Токены</h3>
+              <p class="room-details">182 токена · 14 наборов</p>
+              <div class="resource-meta">
+                <span>Последнее обновление: 2 дня назад</span>
+                <span>560 МБ</span>
+              </div>
+            </article>
+            <article class="card resource-item">
+              <h3>Раздатки</h3>
+              <p class="room-details">31 документ · 8 писем</p>
+              <div class="resource-meta">
+                <span>Последнее обновление: неделю назад</span>
+                <span>120 МБ</span>
+              </div>
+            </article>
+            <article class="card resource-item">
+              <h3>Музыка</h3>
+              <p class="room-details">12 плейлистов · 4 атмосферы</p>
+              <div class="resource-meta">
+                <span>Последнее обновление: сегодня</span>
+                <span>3,1 ГБ</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <div class="cta-banner">
+            <div>
+              <h2>Готовы к следующей сессии?</h2>
+              <p>Создайте сцену, пригласите игроков и запустите комнату.</p>
+            </div>
+            <div class="cta-group">
+              <a class="btn primary" href="rooms.html">Открыть комнаты</a>
+              <a class="btn ghost" href="#overview">Вернуться к обзору</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>DnD Atlas</strong>
+          <p>Совместные приключения, где бы вы ни были.</p>
+        </div>
+        <div>
+          <p class="footer-title">Продукт</p>
+          <ul>
+            <li><a href="rooms.html">Комнаты</a></li>
+            <li><a href="#overview">Кабинет мастера</a></li>
+            <li><a href="index.html#start">Демо</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Контакты</p>
+          <ul>
+            <li>hello@dndatlas.example</li>
+            <li>Discord: DnDAtlas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 DnD Atlas. Все права защищены.</span>
+        <span>Сделано для игр Dungeons & Dragons.</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
