@@ -22,3 +22,15 @@ python offline_app/app.py
 Edit `compute_values()` in `offline_app/formulas.py` to return a dictionary of
 variable names and their values. Click **Refresh values** in the UI to redraw
 the sheet with your computed results.
+
+## A4 PDF export (ready for print)
+
+The **Save A4 PDF** button generates a PDF in A4 size. For this feature install
+`reportlab`:
+
+```bash
+pip install reportlab
+```
+
+If Cyrillic text does not render in the PDF, install a system font such as
+DejaVu Sans or Arial (the app tries to auto-detect them).
