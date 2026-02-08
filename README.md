@@ -1,11 +1,9 @@
 # Offline Print Sheet (Python)
 
 This is a **pure offline** desktop application. It does not use any web
-server, browser, or network connection. The form and the print sheet are two
-windows in a single Tkinter app and update in real time.
-
-The LV segment inputs (bottom circles) immediately populate the LV diagram
-above. This demonstrates how segment values can drive other fields.
+server, browser, or network connection. It shows a single echo sheet template
+that mirrors the provided image layout. Every value on the sheet is rendered as
+a variable name placeholder.
 
 ## Run
 
@@ -17,9 +15,10 @@ python offline_app/app.py
 
 - The app uses Tkinter from the Python standard library.
 - If Tkinter is missing on your system, install the OS package for it.
-- Business rules and formulas are in `offline_app/formulas.py`.
+- Business rules and formulas should be implemented in `offline_app/formulas.py`.
 
-## Printing
+## Workflow
 
-Use **Save to file** to export a text version. The **Print** button tries to
-use the OS print command when it is available.
+Edit `compute_values()` in `offline_app/formulas.py` to return a dictionary of
+variable names and their values. Click **Refresh values** in the UI to redraw
+the sheet with your computed results.

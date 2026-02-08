@@ -1,63 +1,70 @@
 from __future__ import annotations
 
-from typing import Any, Dict, List
+from typing import Dict, Iterable
 
-SEGMENT_KEYS: List[str] = [f"seg_{index}" for index in range(1, 7)]
-SEGMENT_VALUES = {1, 2, 3, 4}
+SEGMENT_VARS = [f"SEG_{index}" for index in range(1, 7)]
 
-DEFAULT_DATA: Dict[str, Any] = {
-    "patient_name": "",
-    "age": "",
-    "diagnosis": "",
-    "rhythm": "",
-}
-for key in SEGMENT_KEYS:
-    DEFAULT_DATA[key] = None
+VARIABLES: Iterable[str] = [
+    "EXAM_DATE",
+    "PATIENT_NAME",
+    "PATIENT_AGE",
+    "DIAGNOSIS",
+    "RHYTHM",
+    "REFERRAL",
+    "PAYMENT_TYPE",
+    "DEVICE",
+    "LV_KDR",
+    "LV_KSR",
+    "LV_EDV",
+    "LV_ESV",
+    "LV_EF",
+    "LV_IVS",
+    "LV_PW",
+    "LV_MASS",
+    "LV_REL_WALL",
+    "RV_BASE",
+    "RV_MID",
+    "RV_TAPSE",
+    "LA_AP",
+    "LA_VOL",
+    "RA_AP",
+    "RA_VOL",
+    "AO_ROOT",
+    "AO_ASC",
+    "PA_DIAMETER",
+    "IVC_DIAMETER",
+    "MV_VE",
+    "MV_VMAX",
+    "MV_REGURG",
+    "MV_GRADE",
+    "AV_VMAX",
+    "AV_GRAD",
+    "AV_REGURG",
+    "AV_GRADE",
+    "TV_VE",
+    "TV_VMAX",
+    "TV_REGURG",
+    "TV_GRADE",
+    "PV_VMAX",
+    "PV_GRAD",
+    "PV_REGURG",
+    "PV_GRADE",
+    "REPORT_TEXT",
+    "CONCLUSION_TEXT",
+    "DOCTOR_NAME",
+]
+
+VARIABLES = list(VARIABLES) + SEGMENT_VARS
+
+DEFAULT_VALUES: Dict[str, str] = {name: name for name in VARIABLES}
 
 
-def _parse_segment(value: Any) -> int | None:
-    if value is None:
-        return None
-    if isinstance(value, int):
-        return value if value in SEGMENT_VALUES else None
-    text = str(value).strip()
-    if not text:
-        return None
-    if text.isdigit():
-        parsed = int(text)
-        return parsed if parsed in SEGMENT_VALUES else None
-    return None
+def compute_values() -> Dict[str, str]:
+    """
+    Replace this function with your own logic.
 
-
-def normalize_data(data: Dict[str, Any]) -> Dict[str, Any]:
-    result: Dict[str, Any] = {}
-    for key, default_value in DEFAULT_DATA.items():
-        result[key] = data.get(key, default_value)
-
-    result["patient_name"] = str(result["patient_name"] or "").strip()
-    result["age"] = str(result["age"] or "").strip()
-    result["diagnosis"] = str(result["diagnosis"] or "").strip()
-    result["rhythm"] = str(result["rhythm"] or "").strip()
-
-    for key in SEGMENT_KEYS:
-        result[key] = _parse_segment(result.get(key))
-
-    return result
-
-
-def compute_results(data: Dict[str, Any]) -> Dict[str, Any]:
-    segments = [data.get(key) for key in SEGMENT_KEYS]
-    filled_segments = [value for value in segments if isinstance(value, int)]
-    segment_count = len(filled_segments)
-    if segment_count:
-        lv_score = round(sum(filled_segments) / segment_count, 2)
-        status = "ok"
-    else:
-        lv_score = 0.0
-        status = "missing_segments"
-
-    return {
-        "lv_score": lv_score,
-        "segment_count": segment_count,
-        "status": status,
-    }
+    Return a dictionary where keys are variable names (from VARIABLES) and
+    values are the calculated results. By default we keep variable names as
+    placeholder values so the sheet acts as a template.
+    """
+    return DEFAULT_VALUES.copy()

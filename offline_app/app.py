@@ -1,392 +1,379 @@
 from __future__ import annotations
 
-import os
-import shutil
-import subprocess
-import sys
-import tempfile
 import tkinter as tk
-from tkinter import filedialog, messagebox, ttk
-from typing import Any, Dict
+from tkinter import ttk
+from typing import Dict
 
-from formulas import DEFAULT_DATA, SEGMENT_KEYS, compute_results, normalize_data
-
-
-def format_score(value: Any) -> str:
-    if isinstance(value, (int, float)):
-        return f"{value:.2f}"
-    return "-"
+from formulas import DEFAULT_VALUES, SEGMENT_VARS, compute_values
 
 
-def format_text(value: Any) -> str:
-    text = str(value or "").strip()
-    return text if text else "-"
-
-
-def format_segment(value: Any) -> str:
-    if isinstance(value, int):
-        return str(value)
-    return "-"
-
-
-class PrintSheetApp:
+class EchoSheetApp:
     def __init__(self, root: tk.Tk) -> None:
         self.root = root
-        self.root.title("Offline Echo Sheet")
-        self.root.geometry("980x640")
+        self.root.title("Offline Echo Template")
+        self.root.geometry("1120x820")
 
-        self.state: Dict[str, Any] = normalize_data(DEFAULT_DATA)
-        self.results: Dict[str, Any] = compute_results(self.state)
-
-        self.vars = {
-            "patient_name": tk.StringVar(value=self.state["patient_name"]),
-            "age": tk.StringVar(value=self.state["age"]),
-            "diagnosis": tk.StringVar(value=self.state["diagnosis"]),
-            "rhythm": tk.StringVar(value=self.state["rhythm"]),
-        }
-        for key in SEGMENT_KEYS:
-            self.vars[key] = tk.StringVar(
-                value="" if self.state.get(key) is None else str(self.state.get(key))
-            )
-
-        self.result_labels: Dict[str, ttk.Label] = {}
-        self.print_labels: Dict[str, ttk.Label] = {}
-        self.segment_canvas_items: Dict[str, Dict[str, int]] = {
-            "top": {},
-            "bottom": {},
-        }
-
-        self._build_form()
-        self._build_print_window()
-        self._bind_traces()
-        self._update_views()
-
-        self.root.protocol("WM_DELETE_WINDOW", self._on_close)
-        self.print_window.protocol("WM_DELETE_WINDOW", self._on_print_close)
-
-    def _build_form(self) -> None:
-        main = ttk.Frame(self.root, padding=12)
-        main.grid(row=0, column=0, sticky="nsew")
-        self.root.columnconfigure(0, weight=1)
-        self.root.rowconfigure(0, weight=1)
-
-        header = ttk.Frame(main)
-        header.grid(row=0, column=0, columnspan=2, sticky="ew", pady=(0, 12))
-        ttk.Label(header, text="Echo Form", font=("Segoe UI", 14, "bold")).pack(
-            side="left"
-        )
-        ttk.Button(
-            header, text="Open print window", command=self._show_print_window
-        ).pack(side="right")
-
-        left_container = ttk.Frame(main)
-        left_container.grid(row=1, column=0, sticky="nsew", padx=(0, 12))
-        main.columnconfigure(0, weight=1)
-        main.columnconfigure(1, weight=1)
-        main.rowconfigure(1, weight=1)
-        left_container.rowconfigure(1, weight=1)
-
-        form_frame = ttk.LabelFrame(left_container, text="Patient info", padding=12)
-        form_frame.grid(row=0, column=0, sticky="ew", pady=(0, 12))
-        segments_frame = ttk.LabelFrame(
-            left_container, text="LV segments (bottom circles)", padding=12
-        )
-        segments_frame.grid(row=1, column=0, sticky="nsew")
-
-        result_frame = ttk.LabelFrame(main, text="LV summary", padding=12)
-        result_frame.grid(row=1, column=1, sticky="nsew")
-
-        row = 0
-        row = self._add_entry(form_frame, row, "Patient name", "patient_name")
-        row = self._add_entry(form_frame, row, "Age", "age")
-        row = self._add_entry(form_frame, row, "Diagnosis", "diagnosis")
-        self._add_entry(form_frame, row, "Rhythm", "rhythm")
-
-        self._build_segment_inputs(segments_frame)
-
-        results = [
-            ("LV score", "lv_score", format_score),
-            ("Segments filled", "segment_count", lambda value: str(value)),
-            ("Status", "status", lambda value: str(value)),
-        ]
-        for index, (label, key, _) in enumerate(results):
-            ttk.Label(result_frame, text=label).grid(
-                row=index, column=0, sticky="w", pady=2
-            )
-            value_label = ttk.Label(result_frame, text="-")
-            value_label.grid(row=index, column=1, sticky="e", pady=2)
-            self.result_labels[key] = value_label
-
-        result_frame.columnconfigure(0, weight=1)
-        result_frame.columnconfigure(1, weight=0)
-
-    def _build_print_window(self) -> None:
-        self.print_window = tk.Toplevel(self.root)
-        self.print_window.title("Print sheet")
-        self.print_window.geometry("820x640")
-
-        container = ttk.Frame(self.print_window, padding=12)
-        container.grid(row=0, column=0, sticky="nsew")
-        self.print_window.columnconfigure(0, weight=1)
-        self.print_window.rowconfigure(0, weight=1)
-
-        header = ttk.Frame(container)
-        header.grid(row=0, column=0, sticky="ew", pady=(0, 12))
-        ttk.Label(header, text="Print Sheet", font=("Segoe UI", 14, "bold")).pack(
-            side="left"
-        )
-        ttk.Button(header, text="Save to file", command=self._save_to_file).pack(
-            side="right", padx=(6, 0)
-        )
-        ttk.Button(header, text="Print", command=self._print_to_system).pack(
+        toolbar = ttk.Frame(self.root, padding=(12, 8))
+        toolbar.pack(side="top", fill="x")
+        ttk.Label(
+            toolbar, text="Offline Echo Sheet Template", font=("Arial", 12, "bold")
+        ).pack(side="left")
+        ttk.Button(toolbar, text="Refresh values", command=self.refresh).pack(
             side="right"
         )
 
-        details_frame = ttk.LabelFrame(container, text="Patient info", padding=12)
-        details_frame.grid(row=1, column=0, sticky="ew", pady=(0, 12))
-        lv_frame = ttk.LabelFrame(container, text="LV diagram", padding=12)
-        lv_frame.grid(row=2, column=0, sticky="nsew", pady=(0, 12))
-        summary_frame = ttk.LabelFrame(container, text="Summary", padding=12)
-        summary_frame.grid(row=3, column=0, sticky="ew")
+        container = ttk.Frame(self.root)
+        container.pack(fill="both", expand=True)
+        container.rowconfigure(0, weight=1)
+        container.columnconfigure(0, weight=1)
 
-        container.rowconfigure(2, weight=1)
+        self.canvas = tk.Canvas(container, background="#e9edf2")
+        self.canvas.grid(row=0, column=0, sticky="nsew")
 
-        detail_rows = [
-            ("Patient name", "patient_name", format_text),
-            ("Age", "age", format_text),
-            ("Diagnosis", "diagnosis", format_text),
-            ("Rhythm", "rhythm", format_text),
-        ]
-        for index, (label, key, _) in enumerate(detail_rows):
-            ttk.Label(details_frame, text=label).grid(
-                row=index, column=0, sticky="w", pady=2
+        vbar = ttk.Scrollbar(container, orient="vertical", command=self.canvas.yview)
+        hbar = ttk.Scrollbar(container, orient="horizontal", command=self.canvas.xview)
+        vbar.grid(row=0, column=1, sticky="ns")
+        hbar.grid(row=1, column=0, sticky="ew")
+        self.canvas.configure(yscrollcommand=vbar.set, xscrollcommand=hbar.set)
+
+        self.page_left = 30
+        self.page_top = 30
+        self.page_width = 980
+        self.page_height = 1350
+        self.text_items: Dict[str, int] = {}
+
+        self._draw_sheet()
+        self.refresh()
+
+        self.canvas.configure(
+            scrollregion=(
+                0,
+                0,
+                self.page_left + self.page_width + 60,
+                self.page_top + self.page_height + 60,
             )
-            value_label = ttk.Label(details_frame, text="-")
-            value_label.grid(row=index, column=1, sticky="e", pady=2)
-            self.print_labels[key] = value_label
-
-        self._build_lv_canvas(lv_frame)
-
-        summary_rows = [
-            ("LV score", "lv_score", format_score),
-            ("Segments filled", "segment_count", lambda value: str(value)),
-            ("Status", "status", lambda value: str(value)),
-        ]
-        for index, (label, key, _) in enumerate(summary_rows):
-            ttk.Label(summary_frame, text=label).grid(
-                row=index, column=0, sticky="w", pady=2
-            )
-            value_label = ttk.Label(summary_frame, text="-")
-            value_label.grid(row=index, column=1, sticky="e", pady=2)
-            self.print_labels[key] = value_label
-
-        for frame in (details_frame, summary_frame):
-            frame.columnconfigure(0, weight=1)
-            frame.columnconfigure(1, weight=0)
-
-    def _build_lv_canvas(self, parent: ttk.LabelFrame) -> None:
-        canvas = tk.Canvas(
-            parent,
-            width=420,
-            height=300,
-            background="white",
-            highlightthickness=1,
-            highlightbackground="#cfd4dc",
         )
-        canvas.grid(row=0, column=0, sticky="nsew")
-        parent.columnconfigure(0, weight=1)
-        parent.rowconfigure(0, weight=1)
 
-        canvas.create_text(210, 16, text="LV top view", font=("Segoe UI", 10, "bold"))
-        canvas.create_oval(120, 40, 300, 220, outline="#485767", width=2)
+    def refresh(self) -> None:
+        values = DEFAULT_VALUES.copy()
+        values.update(compute_values())
+        self.apply_values(values)
 
-        top_positions = {
-            "seg_1": (210, 60),
-            "seg_2": (255, 90),
-            "seg_3": (255, 160),
-            "seg_4": (210, 190),
-            "seg_5": (165, 160),
-            "seg_6": (165, 90),
-        }
+    def apply_values(self, values: Dict[str, str]) -> None:
+        for key, item_id in self.text_items.items():
+            if key in values:
+                self.canvas.itemconfigure(item_id, text=str(values[key]))
 
-        for key, (x, y) in top_positions.items():
-            canvas.create_oval(x - 16, y - 16, x + 16, y + 16, outline="#4b5563", width=2)
-            text_id = canvas.create_text(x, y, text="-", font=("Segoe UI", 10, "bold"))
-            self.segment_canvas_items["top"][key] = text_id
+    def _draw_sheet(self) -> None:
+        left = self.page_left
+        top = self.page_top
+        right = left + self.page_width
+        bottom = top + self.page_height
 
-        bottom_y = 255
-        start_x = 50
-        spacing = 60
-        for index, key in enumerate(SEGMENT_KEYS):
+        self.canvas.create_rectangle(left, top, right, bottom, fill="white", outline="#333")
+
+        header_bottom = top + 90
+        self.canvas.create_rectangle(left, top, right, header_bottom, fill="#e0e6f0", outline="#333")
+        self.canvas.create_text(
+            left + 20,
+            top + 25,
+            text="ЭХОТЕКА",
+            anchor="w",
+            font=("Arial", 16, "bold"),
+        )
+        self.canvas.create_text(
+            right - 20,
+            top + 25,
+            text="Трансторакальная эхокг",
+            anchor="e",
+            font=("Arial", 12, "bold"),
+        )
+
+        title_y = header_bottom + 30
+        self.canvas.create_text(
+            (left + right) / 2,
+            title_y,
+            text="ЭХОКАРДИОГРАММА от",
+            anchor="e",
+            font=("Arial", 12, "bold"),
+        )
+        self._add_value("EXAM_DATE", (left + right) / 2 + 10, title_y, anchor="w")
+
+        info_top = title_y + 20
+        info_bottom = info_top + 80
+        self._draw_info_block(left + 10, info_top, right - 10, info_bottom)
+
+        section_top = info_bottom + 20
+        box_height = 120
+        box_width = (self.page_width - 40) / 2
+
+        self._draw_measure_box(
+            left + 10,
+            section_top,
+            box_width,
+            box_height,
+            "Левый желудочек",
+            [
+                ("КДР", "LV_KDR"),
+                ("КСР", "LV_KSR"),
+                ("КДО", "LV_EDV"),
+                ("КСО", "LV_ESV"),
+                ("ФВ", "LV_EF"),
+                ("МЖП", "LV_IVS"),
+                ("ЗСЛЖ", "LV_PW"),
+            ],
+        )
+        self._draw_measure_box(
+            left + 20 + box_width,
+            section_top,
+            box_width,
+            box_height,
+            "Правый желудочек",
+            [
+                ("База", "RV_BASE"),
+                ("Средний", "RV_MID"),
+                ("TAPSE", "RV_TAPSE"),
+            ],
+        )
+
+        next_row = section_top + box_height + 20
+        self._draw_measure_box(
+            left + 10,
+            next_row,
+            box_width,
+            box_height,
+            "Левое предсердие",
+            [
+                ("АП", "LA_AP"),
+                ("Объём", "LA_VOL"),
+            ],
+        )
+        self._draw_measure_box(
+            left + 20 + box_width,
+            next_row,
+            box_width,
+            box_height,
+            "Правое предсердие",
+            [
+                ("АП", "RA_AP"),
+                ("Объём", "RA_VOL"),
+            ],
+        )
+
+        next_row += box_height + 20
+        self._draw_measure_box(
+            left + 10,
+            next_row,
+            box_width,
+            box_height,
+            "Аорта и ЛА",
+            [
+                ("Корень аорты", "AO_ROOT"),
+                ("Восход.", "AO_ASC"),
+                ("ЛА", "PA_DIAMETER"),
+                ("НПВ", "IVC_DIAMETER"),
+            ],
+        )
+        self._draw_measure_box(
+            left + 20 + box_width,
+            next_row,
+            box_width,
+            box_height,
+            "Миокард",
+            [
+                ("Масса ЛЖ", "LV_MASS"),
+                ("Отн. толщина", "LV_REL_WALL"),
+            ],
+        )
+
+        valves_top = next_row + box_height + 20
+        self._draw_valve_table(left + 10, valves_top, self.page_width - 20)
+
+        segments_top = valves_top + 190
+        self._draw_segments(left + 10, segments_top, self.page_width - 20)
+
+        report_top = segments_top + 260
+        self._draw_text_block(
+            left + 10,
+            report_top,
+            self.page_width - 20,
+            130,
+            "Описание",
+            "REPORT_TEXT",
+        )
+        conclusion_top = report_top + 150
+        self._draw_text_block(
+            left + 10,
+            conclusion_top,
+            self.page_width - 20,
+            110,
+            "Заключение",
+            "CONCLUSION_TEXT",
+        )
+
+        footer_y = conclusion_top + 140
+        self.canvas.create_line(left + 10, footer_y, right - 10, footer_y, fill="#333")
+        self.canvas.create_text(
+            left + 20,
+            footer_y + 20,
+            text="Врач:",
+            anchor="w",
+            font=("Arial", 10, "bold"),
+        )
+        self._add_value("DOCTOR_NAME", left + 80, footer_y + 20, anchor="w")
+
+    def _draw_info_block(self, left: float, top: float, right: float, bottom: float) -> None:
+        self.canvas.create_rectangle(left, top, right, bottom, outline="#333")
+
+        mid_x = (left + right) / 2
+        self.canvas.create_line(mid_x, top, mid_x, bottom, fill="#333")
+
+        self._add_label_value(left + 10, top + 15, "Пациент:", "PATIENT_NAME", left + 130)
+        self._add_label_value(left + 10, top + 40, "Возраст:", "PATIENT_AGE", left + 130)
+        self._add_label_value(left + 10, top + 65, "Диагноз:", "DIAGNOSIS", left + 130)
+        self._add_label_value(left + 10, top + 90, "Ритм:", "RHYTHM", left + 130)
+
+        self._add_label_value(mid_x + 10, top + 15, "Направление:", "REFERRAL", mid_x + 150)
+        self._add_label_value(mid_x + 10, top + 40, "Форма оплаты:", "PAYMENT_TYPE", mid_x + 150)
+        self._add_label_value(mid_x + 10, top + 65, "Аппарат:", "DEVICE", mid_x + 150)
+
+    def _draw_measure_box(
+        self,
+        left: float,
+        top: float,
+        width: float,
+        height: float,
+        title: str,
+        fields: list[tuple[str, str]],
+    ) -> None:
+        right = left + width
+        bottom = top + height
+        self.canvas.create_rectangle(left, top, right, bottom, outline="#333")
+        self.canvas.create_text(
+            left + 10, top + 12, text=title, anchor="w", font=("Arial", 10, "bold")
+        )
+
+        y = top + 32
+        for label, var_name in fields:
+            self._add_label_value(left + 10, y, f"{label}:", var_name, left + 120)
+            y += 18
+
+    def _draw_valve_table(self, left: float, top: float, width: float) -> None:
+        height = 170
+        right = left + width
+        bottom = top + height
+        self.canvas.create_rectangle(left, top, right, bottom, outline="#333")
+        self.canvas.create_text(
+            left + 10, top + 12, text="Клапаны", anchor="w", font=("Arial", 10, "bold")
+        )
+
+        headers = ["VЕ", "Vmax", "Регург.", "Степень"]
+        col_positions = [left + 160, left + 300, left + 440, left + 580]
+        for header, x in zip(headers, col_positions):
+            self.canvas.create_text(x, top + 32, text=header, anchor="w", font=("Arial", 9, "bold"))
+
+        rows = [
+            ("Митральный", ["MV_VE", "MV_VMAX", "MV_REGURG", "MV_GRADE"]),
+            ("Аортальный", ["AV_VMAX", "AV_GRAD", "AV_REGURG", "AV_GRADE"]),
+            ("Трикусп.", ["TV_VE", "TV_VMAX", "TV_REGURG", "TV_GRADE"]),
+            ("Легочный", ["PV_VMAX", "PV_GRAD", "PV_REGURG", "PV_GRADE"]),
+        ]
+
+        y = top + 52
+        for label, keys in rows:
+            self.canvas.create_text(left + 10, y, text=label, anchor="w", font=("Arial", 9))
+            for key, x in zip(keys, col_positions):
+                self._add_value(key, x, y, anchor="w")
+            y += 28
+
+    def _draw_segments(self, left: float, top: float, width: float) -> None:
+        right = left + width
+        bottom = top + 230
+        self.canvas.create_rectangle(left, top, right, bottom, outline="#333")
+        self.canvas.create_text(
+            left + 10, top + 12, text="Сегменты ЛЖ", anchor="w", font=("Arial", 10, "bold")
+        )
+
+        center_x = left + width / 2
+        center_y = top + 95
+        radius = 70
+        self.canvas.create_oval(
+            center_x - radius,
+            center_y - radius,
+            center_x + radius,
+            center_y + radius,
+            outline="#333",
+            width=2,
+        )
+
+        positions = [
+            (0, -45),
+            (38, -20),
+            (38, 20),
+            (0, 45),
+            (-38, 20),
+            (-38, -20),
+        ]
+        for (dx, dy), key in zip(positions, SEGMENT_VARS):
+            x = center_x + dx
+            y = center_y + dy
+            self.canvas.create_oval(x - 18, y - 18, x + 18, y + 18, outline="#333")
+            self._add_value(key, x, y, anchor="center")
+
+        bottom_y = top + 180
+        start_x = left + 120
+        spacing = 90
+        for index, key in enumerate(SEGMENT_VARS):
             x = start_x + spacing * index
-            canvas.create_oval(x - 12, bottom_y - 12, x + 12, bottom_y + 12, outline="#6b7280")
-            text_id = canvas.create_text(x, bottom_y, text="-", font=("Segoe UI", 10))
-            self.segment_canvas_items["bottom"][key] = text_id
-            canvas.create_text(x, bottom_y + 18, text=f"S{index + 1}", font=("Segoe UI", 8))
+            self.canvas.create_oval(x - 14, bottom_y - 14, x + 14, bottom_y + 14, outline="#333")
+            self._add_value(key, x, bottom_y, anchor="center")
 
-        self.segment_canvas = canvas
+        legend_x = right - 220
+        self.canvas.create_text(legend_x, bottom_y - 20, text="1 - норма", anchor="w", font=("Arial", 8))
+        self.canvas.create_text(legend_x, bottom_y, text="2 - гипокинезия", anchor="w", font=("Arial", 8))
+        self.canvas.create_text(legend_x, bottom_y + 20, text="3 - акинезия", anchor="w", font=("Arial", 8))
+        self.canvas.create_text(legend_x, bottom_y + 40, text="4 - дискинезия", anchor="w", font=("Arial", 8))
 
-    def _add_entry(self, parent: ttk.LabelFrame, row: int, label: str, key: str) -> int:
-        ttk.Label(parent, text=label).grid(row=row, column=0, sticky="w", pady=4)
-        entry = ttk.Entry(parent, textvariable=self.vars[key])
-        entry.grid(row=row, column=1, sticky="ew", pady=4, padx=(12, 0))
-        parent.columnconfigure(1, weight=1)
-        return row + 1
-
-    def _build_segment_inputs(self, parent: ttk.LabelFrame) -> None:
-        values = ["", "1", "2", "3", "4"]
-        for index, key in enumerate(SEGMENT_KEYS):
-            ttk.Label(parent, text=f"S{index + 1}").grid(
-                row=0, column=index, pady=(0, 6)
-            )
-            combo = ttk.Combobox(
-                parent,
-                textvariable=self.vars[key],
-                values=values,
-                width=3,
-                state="readonly",
-            )
-            combo.grid(row=1, column=index, padx=4, pady=2)
-            parent.columnconfigure(index, weight=1)
-
-    def _bind_traces(self) -> None:
-        for var in self.vars.values():
-            var.trace_add("write", self._on_change)
-
-    def _collect_state(self) -> Dict[str, Any]:
-        return {key: var.get() for key, var in self.vars.items()}
-
-    def _on_change(self, *_: Any) -> None:
-        raw_state = self._collect_state()
-        self.state = normalize_data(raw_state)
-        self.results = compute_results(self.state)
-        self._update_views()
-
-    def _update_views(self) -> None:
-        result_formatters = {
-            "lv_score": format_score,
-            "segment_count": lambda value: str(value),
-            "status": lambda value: str(value),
-        }
-
-        for key, label in self.result_labels.items():
-            formatter = result_formatters.get(key, lambda value: str(value))
-            label.config(text=formatter(self.results.get(key)))
-
-        detail_formatters = {
-            "patient_name": format_text,
-            "age": format_text,
-            "diagnosis": format_text,
-            "rhythm": format_text,
-            "lv_score": format_score,
-            "segment_count": lambda value: str(value),
-            "status": lambda value: str(value),
-        }
-
-        for key, label in self.print_labels.items():
-            value = self.state.get(key, self.results.get(key, "-"))
-            formatter = detail_formatters.get(key, lambda value: str(value))
-            label.config(text=formatter(value))
-
-        for key in SEGMENT_KEYS:
-            value = self.state.get(key)
-            text = format_segment(value)
-            top_id = self.segment_canvas_items["top"].get(key)
-            bottom_id = self.segment_canvas_items["bottom"].get(key)
-            if top_id:
-                self.segment_canvas.itemconfigure(top_id, text=text)
-            if bottom_id:
-                self.segment_canvas.itemconfigure(bottom_id, text=text)
-
-    def _show_print_window(self) -> None:
-        self.print_window.deiconify()
-        self.print_window.lift()
-        self.print_window.focus_force()
-
-    def _build_print_text(self) -> str:
-        segment_lines = []
-        for index, key in enumerate(SEGMENT_KEYS):
-            segment_lines.append(f"S{index + 1}: {format_segment(self.state.get(key))}")
-
-        lines = [
-            "ECHO PRINT SHEET",
-            "",
-            "Patient info",
-            f"Patient: {format_text(self.state['patient_name'])}",
-            f"Age: {format_text(self.state['age'])}",
-            f"Diagnosis: {format_text(self.state['diagnosis'])}",
-            f"Rhythm: {format_text(self.state['rhythm'])}",
-            "",
-            "LV segments",
-            *segment_lines,
-            "",
-            "Summary",
-            f"LV score: {format_score(self.results['lv_score'])}",
-            f"Segments filled: {self.results['segment_count']}",
-            f"Status: {self.results['status']}",
-            "",
-        ]
-        return "\n".join(lines)
-
-    def _save_to_file(self) -> None:
-        filename = filedialog.asksaveasfilename(
-            title="Save print sheet",
-            defaultextension=".txt",
-            filetypes=[("Text files", "*.txt"), ("All files", "*.*")],
+    def _draw_text_block(
+        self, left: float, top: float, width: float, height: float, title: str, var_name: str
+    ) -> None:
+        right = left + width
+        bottom = top + height
+        self.canvas.create_rectangle(left, top, right, bottom, outline="#333")
+        self.canvas.create_text(
+            left + 10, top + 12, text=title, anchor="w", font=("Arial", 10, "bold")
         )
-        if not filename:
-            return
-        try:
-            with open(filename, "w", encoding="utf-8") as handle:
-                handle.write(self._build_print_text())
-        except OSError as exc:
-            messagebox.showerror("Save failed", f"Unable to save file:\n{exc}")
+        self._add_value(var_name, left + 10, top + 32, anchor="nw", width=width - 20)
 
-    def _print_to_system(self) -> None:
-        text = self._build_print_text()
-        try:
-            tmp = tempfile.NamedTemporaryFile(
-                delete=False, suffix=".txt", mode="w", encoding="utf-8"
-            )
-            with tmp:
-                tmp.write(text)
-        except OSError as exc:
-            messagebox.showerror("Print failed", f"Unable to create temp file:\n{exc}")
-            return
+    def _add_label_value(
+        self,
+        x_label: float,
+        y: float,
+        label: str,
+        var_name: str,
+        x_value: float,
+    ) -> None:
+        self.canvas.create_text(x_label, y, text=label, anchor="w", font=("Arial", 9))
+        self._add_value(var_name, x_value, y, anchor="w")
 
-        if sys.platform.startswith("win"):
-            try:
-                os.startfile(tmp.name, "print")
-            except OSError as exc:
-                messagebox.showerror("Print failed", f"Unable to print:\n{exc}")
-            return
-
-        command = shutil.which("lp") or shutil.which("lpr")
-        if not command:
-            messagebox.showinfo(
-                "Print not available",
-                "Printing is not configured on this system. "
-                "Use 'Save to file' instead.",
-            )
-            return
-
-        try:
-            subprocess.run([command, tmp.name], check=False)
-        except OSError as exc:
-            messagebox.showerror("Print failed", f"Unable to print:\n{exc}")
-
-    def _on_print_close(self) -> None:
-        self.print_window.withdraw()
-
-    def _on_close(self) -> None:
-        self.print_window.destroy()
-        self.root.destroy()
+    def _add_value(
+        self, var_name: str, x: float, y: float, anchor: str = "w", width: float | None = None
+    ) -> None:
+        item_id = self.canvas.create_text(
+            x,
+            y,
+            text=var_name,
+            anchor=anchor,
+            font=("Arial", 9, "bold"),
+            width=width,
+        )
+        self.text_items[var_name] = item_id
 
 
 def main() -> None:
     root = tk.Tk()
     ttk.Style().theme_use("clam")
-    PrintSheetApp(root)
+    EchoSheetApp(root)
     root.mainloop()
 
 
