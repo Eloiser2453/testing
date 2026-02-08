@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from typing import Any, Dict, Tuple
 
-
 DEFAULT_DATA: Dict[str, Any] = {
     "customer_name": "",
     "order_number": "",
@@ -65,7 +64,9 @@ def normalize_data(data: Dict[str, Any]) -> Dict[str, Any]:
     region = str(result["region"] or "").strip().lower()
     delivery = str(result["delivery"] or "").strip().lower()
     result["region"] = region if region in REGIONS else DEFAULT_DATA["region"]
-    result["delivery"] = delivery if delivery in DELIVERY_TYPES else DEFAULT_DATA["delivery"]
+    result["delivery"] = (
+        delivery if delivery in DELIVERY_TYPES else DEFAULT_DATA["delivery"]
+    )
 
     return result
 

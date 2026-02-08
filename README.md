@@ -1,45 +1,22 @@
-# Live Print Sheet (Python)
+# Offline Print Sheet (Python)
 
-This project provides two pages:
-
-- `/form` for entering data
-- `/print` for a print-friendly sheet that updates in real time
-
-The backend uses WebSockets to broadcast updates to all connected clients.
-
-## Setup
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
+This is a **pure offline** desktop application. It does not use any web
+server, browser, or network connection. The form and the print sheet are two
+windows in a single Tkinter app and update in real time.
 
 ## Run
 
 ```bash
-uvicorn app.main:app --reload
+python offline_app/app.py
 ```
 
-## Offline mode (no backend)
+## Notes
 
-If you need a fully offline workflow without FastAPI, use the static files in
-`offline/` and run the helper script:
+- The app uses Tkinter from the Python standard library.
+- If Tkinter is missing on your system, install the OS package for it.
+- Business rules and formulas are in `offline_app/formulas.py`.
 
-```bash
-python offline/run_offline.py
-```
+## Printing
 
-This starts a local HTTP server and opens both pages in your browser. No
-internet connection is required.
-
-## Usage
-
-1. Open `http://localhost:8000/form` and enter data.
-2. Open `http://localhost:8000/print` in another tab.
-3. Updates appear immediately on the print page.
-
-## Formulas
-
-Business rules are implemented in `app/formulas.py`. Update the conditions and
-fees there to match your real calculation logic.
+Use **Save to file** to export a text version. The **Print** button tries to
+use the OS print command when it is available.
