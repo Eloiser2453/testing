@@ -4,6 +4,9 @@ This is a **pure offline** desktop application. It does not use any web
 server, browser, or network connection. The form and the print sheet are two
 windows in a single Tkinter app and update in real time.
 
+The LV segment inputs (bottom circles) immediately populate the LV diagram
+above. This demonstrates how segment values can drive other fields.
+
 ## Run
 
 ```bash
