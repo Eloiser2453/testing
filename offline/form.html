@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Live Form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div>
+        <h1>Live Form</h1>
+        <p>Values are pushed in real time to the print sheet.</p>
+      </div>
+      <div class="actions">
+        <a class="button" href="./print.html" target="_blank" rel="noopener"
+          >Open print sheet</a
+        >
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Input data</h2>
+        <form id="live-form" autocomplete="off">
+          <div class="field">
+            <label for="customer_name">Customer name</label>
+            <input id="customer_name" data-field="customer_name" type="text" />
+          </div>
+          <div class="field">
+            <label for="order_number">Order number</label>
+            <input id="order_number" data-field="order_number" type="text" />
+          </div>
+          <div class="field">
+            <label for="product">Product</label>
+            <input id="product" data-field="product" type="text" />
+          </div>
+          <div class="field">
+            <label for="quantity">Quantity</label>
+            <input
+              id="quantity"
+              data-field="quantity"
+              type="number"
+              step="1"
+              min="0"
+            />
+          </div>
+          <div class="field">
+            <label for="price">Unit price</label>
+            <input
+              id="price"
+              data-field="price"
+              type="number"
+              step="0.01"
+              min="0"
+            />
+          </div>
+          <div class="field">
+            <label for="region">Region</label>
+            <select id="region" data-field="region">
+              <option value="local">Local</option>
+              <option value="national">National</option>
+              <option value="international">International</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="delivery">Delivery</label>
+            <select id="delivery" data-field="delivery">
+              <option value="standard">Standard</option>
+              <option value="express">Express</option>
+            </select>
+          </div>
+          <div class="field checkbox">
+            <label>
+              <input id="urgent" data-field="urgent" type="checkbox" />
+              Urgent processing
+            </label>
+          </div>
+          <div class="field">
+            <label for="notes">Notes</label>
+            <textarea id="notes" data-field="notes" rows="3"></textarea>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Calculated results</h2>
+        <div class="result-row">
+          <span>Subtotal</span>
+          <span id="result_subtotal">0.00</span>
+        </div>
+        <div class="result-row">
+          <span>Discount rate</span>
+          <span id="result_discount_rate">0%</span>
+        </div>
+        <div class="result-row">
+          <span>Discount amount</span>
+          <span id="result_discount_amount">0.00</span>
+        </div>
+        <div class="result-row">
+          <span>Delivery fee</span>
+          <span id="result_delivery_fee">0.00</span>
+        </div>
+        <div class="result-row">
+          <span>Urgent fee</span>
+          <span id="result_urgent_fee">0.00</span>
+        </div>
+        <div class="result-row">
+          <span>Tax rate</span>
+          <span id="result_tax_rate">0%</span>
+        </div>
+        <div class="result-row">
+          <span>Tax amount</span>
+          <span id="result_tax_amount">0.00</span>
+        </div>
+        <div class="result-row total">
+          <span>Total</span>
+          <span id="result_total">0.00</span>
+        </div>
+        <div class="result-row status">
+          <span>Status</span>
+          <span id="result_status">missing_values</span>
+        </div>
+      </section>
+    </main>
+
+    <script src="./shared.js"></script>
+    <script src="./form.js"></script>
+  </body>
+</html>

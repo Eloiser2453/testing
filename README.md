@@ -21,6 +21,18 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
+## Offline mode (no backend)
+
+If you need a fully offline workflow without FastAPI, use the static files in
+`offline/` and run the helper script:
+
+```bash
+python offline/run_offline.py
+```
+
+This starts a local HTTP server and opens both pages in your browser. No
+internet connection is required.
+
 ## Usage
 
 1. Open `http://localhost:8000/form` and enter data.
