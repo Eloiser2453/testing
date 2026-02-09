@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Комнаты и кампании — DnD Atlas</title>
+    <meta
+      name="description"
+      content="Список комнат и кампаний DnD Atlas: активные партии, расписание и подготовка сцен."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">DnD Atlas</a>
+        <nav class="nav">
+          <a href="index.html">Главная</a>
+          <a href="master.html">Кабинет мастера</a>
+          <a href="#rooms">Комнаты</a>
+          <a href="#campaigns">Кампании</a>
+          <a href="#schedule">Календарь</a>
+          <a href="index.html#faq">FAQ</a>
+        </nav>
+        <a class="btn small ghost" href="#rooms">Создать комнату</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-grid">
+          <div>
+            <span class="eyebrow">Лобби</span>
+            <h1>Комнаты и кампании</h1>
+            <p class="lead">
+              Организуйте активные партии, управляйте кампаниями и готовьтесь к
+              следующей сессии вместе с игроками.
+            </p>
+            <div class="cta">
+              <a class="btn primary" href="#">Создать комнату</a>
+              <a class="btn ghost" href="#campaigns">Смотреть кампании</a>
+            </div>
+          </div>
+          <div class="summary-card">
+            <span class="tag">Следующая сессия</span>
+            <h3>Пепельные моря</h3>
+            <p class="room-details">Сегодня, 19:30 · Сцена «Вечерняя гавань»</p>
+            <div class="room-meta">
+              <span>5 игроков</span>
+              <span>Мастер: Элира</span>
+            </div>
+            <div class="progress">
+              <span style="width: 72%"></span>
+            </div>
+            <p class="room-details">Подготовка сцены: 72%</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="rooms" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Активные комнаты</h2>
+            <p>Следите за ходом партии, подключайтесь или готовьте сцену заранее.</p>
+          </div>
+          <div class="room-grid">
+            <article class="card room-card">
+              <div class="room-meta">
+                <span class="room-status live">В процессе</span>
+                <span>5/6 игроков</span>
+              </div>
+              <h3 class="room-title">Порт Невермор</h3>
+              <p class="room-details">Сцена: Доковый квартал. Ход Мары.</p>
+              <div class="room-actions">
+                <a class="btn ghost small" href="#">Войти</a>
+                <button class="btn ghost small" type="button">Ссылка</button>
+              </div>
+            </article>
+            <article class="card room-card">
+              <div class="room-meta">
+                <span class="room-status prep">Подготовка</span>
+                <span>3/5 игроков</span>
+              </div>
+              <h3 class="room-title">Лес Серебряных Волков</h3>
+              <p class="room-details">Новая карта, туман войны включен.</p>
+              <div class="room-actions">
+                <a class="btn ghost small" href="#">Открыть</a>
+                <button class="btn ghost small" type="button">Настройки</button>
+              </div>
+            </article>
+            <article class="card room-card">
+              <div class="room-meta">
+                <span class="room-status pause">Пауза</span>
+                <span>4/4 игроков</span>
+              </div>
+              <h3 class="room-title">Глубины Карага</h3>
+              <p class="room-details">Последняя сессия: 2 дня назад.</p>
+              <div class="room-actions">
+                <a class="btn ghost small" href="#">Перезапуск</a>
+                <button class="btn ghost small" type="button">Отчёт</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="campaigns" class="section alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Кампании</h2>
+            <p>Соберите заметки, ключевые сцены и прогресс по каждой истории.</p>
+          </div>
+          <div class="campaign-grid">
+            <article class="card">
+              <h3>Пепельные моря</h3>
+              <p class="room-details">
+                Морской эпик с политическими интригами и древними богами.
+              </p>
+              <div class="chip-row">
+                <span class="chip">Эпик</span>
+                <span class="chip">Уровни 6–10</span>
+                <span class="chip">5 игроков</span>
+              </div>
+              <div class="progress">
+                <span style="width: 64%"></span>
+              </div>
+              <p class="room-details">Прогресс главы: 64%</p>
+            </article>
+            <article class="card">
+              <h3>Осколки Эфира</h3>
+              <p class="room-details">Городское фэнтези с тайнами магических домов.</p>
+              <div class="chip-row">
+                <span class="chip">Город</span>
+                <span class="chip">Уровни 3–5</span>
+                <span class="chip">4 игрока</span>
+              </div>
+              <div class="progress">
+                <span style="width: 38%"></span>
+              </div>
+              <p class="room-details">Прогресс главы: 38%</p>
+            </article>
+            <article class="card">
+              <h3>Тени Хальдора</h3>
+              <p class="room-details">Мрачное подземелье и охота на культ.</p>
+              <div class="chip-row">
+                <span class="chip">Данж</span>
+                <span class="chip">Уровни 1–4</span>
+                <span class="chip">6 игроков</span>
+              </div>
+              <div class="progress">
+                <span style="width: 82%"></span>
+              </div>
+              <p class="room-details">Прогресс главы: 82%</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="schedule" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Ближайшие сессии</h2>
+            <p>Все запланированные встречи и напоминания для команды.</p>
+          </div>
+          <ul class="schedule">
+            <li>
+              <div class="schedule-meta">
+                <strong>Пепельные моря · Вечерняя гавань</strong>
+                <span>Карта: Порт Невермор</span>
+              </div>
+              <time datetime="2026-02-04T19:30">Сегодня, 19:30</time>
+            </li>
+            <li>
+              <div class="schedule-meta">
+                <strong>Осколки Эфира · Биржа теней</strong>
+                <span>Напоминание: подготовить NPC</span>
+              </div>
+              <time datetime="2026-02-06T20:00">Пятница, 20:00</time>
+            </li>
+            <li>
+              <div class="schedule-meta">
+                <strong>Тени Хальдора · Глава 4</strong>
+                <span>Бой: культисты и некромант</span>
+              </div>
+              <time datetime="2026-02-09T18:00">Понедельник, 18:00</time>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <div class="cta-banner">
+            <div>
+              <h2>Нужен быстрый старт?</h2>
+              <p>Создайте комнату и пригласите игроков по ссылке за минуту.</p>
+            </div>
+            <div class="cta-group">
+              <a class="btn primary" href="#">Новая комната</a>
+              <a class="btn ghost" href="index.html#start">Перейти к демо</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>DnD Atlas</strong>
+          <p>Совместные приключения, где бы вы ни были.</p>
+        </div>
+        <div>
+          <p class="footer-title">Продукт</p>
+          <ul>
+            <li><a href="#rooms">Комнаты</a></li>
+            <li><a href="#campaigns">Кампании</a></li>
+            <li><a href="master.html">Кабинет мастера</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Контакты</p>
+          <ul>
+            <li>hello@dndatlas.example</li>
+            <li>Discord: DnDAtlas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 DnD Atlas. Все права защищены.</span>
+        <span>Сделано для игр Dungeons & Dragons.</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
