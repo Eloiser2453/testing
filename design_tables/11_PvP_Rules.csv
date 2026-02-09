@@ -1,0 +1,11 @@
+rule_id,parameter,value,unit,notes
+pvp_01,raid_unlock_level,7,player_level,loot raids unlock at level 7
+pvp_02,protection_level,6,player_level,below this no raids
+pvp_03,matchmaking_power_range,20,percent,opponent power within +-20%
+pvp_04,daily_raids,5,raids,limit per day
+pvp_05,raid_stamina_cost,8,stamina,cost per raid
+pvp_06,resource_loss_cap,15,percent,max loss per raid
+pvp_07,shield_duration_after_raid,8,hours,auto shield after being raided
+pvp_08,revenge_window,12,hours,revenge available after raid
+pvp_09,win_reward_table,pvp_win,table_id,uses reward table
+pvp_10,loss_reward_table,pvp_loss,table_id,consolation rewards

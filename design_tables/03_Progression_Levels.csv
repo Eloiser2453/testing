@@ -1,0 +1,21 @@
+player_level,xp_total,xp_to_next,dungeon_floor_unlock,base_level_cap,hero_level_cap,stamina_cap,feature_unlocks,notes
+1,0,100,1,1,10,60,"Base; Dungeon",start
+2,100,120,2,1,10,60,"Daily Quests",
+3,220,140,3,2,15,65,"Gacha",
+4,360,160,4,2,15,65,"Workshop",
+5,520,180,5,3,20,70,"Global Map","soft wall milestone"
+6,700,200,6,3,20,70,"Arena (no loot)",
+7,900,220,7,4,25,75,"PvP Raids",
+8,1120,240,8,4,25,75,"Forge",
+9,1360,260,9,5,30,80,"Expeditions",
+10,1620,280,10,5,30,80,"Hard Mode","soft wall milestone"
+11,1900,300,11,6,35,85,,
+12,2200,320,12,6,35,85,"Guilds",
+13,2520,340,13,7,40,90,,
+14,2860,360,14,7,40,90,"Elite Dungeons",
+15,3220,380,15,8,45,95,"Legendary Hunt","soft wall milestone"
+16,3600,400,16,8,45,95,,
+17,4000,420,17,9,50,100,"Seasonal Events",
+18,4420,440,18,9,50,100,,
+19,4860,460,19,10,55,105,"Tower Rush",
+20,5320,480,20,10,60,110,"Season End Chest",

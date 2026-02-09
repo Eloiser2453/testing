@@ -1,0 +1,12 @@
+quest_id,quest_name,target_type,target_amount,reward_currency,reward_amount,xp_reward,is_weekly,notes
+d1,Complete 3 dungeon runs,dungeon_runs,3,gold,200,50,FALSE,
+d2,Spend 30 stamina,stamina_spent,30,gems,5,40,FALSE,
+d3,Upgrade a building,building_upgrade,1,wood,100,40,FALSE,
+d4,Level up a hero,hero_level_up,1,hero_xp,20,40,FALSE,
+d5,Open 1 chest,open_chest,1,gems,5,40,FALSE,
+d6,Collect from base,base_collect,2,gold,150,30,FALSE,
+d7,Win 1 arena fight,pvp_win,1,pvp_token,10,50,FALSE,
+d8,Craft 1 item,craft_item,1,stone,80,40,FALSE,
+w1,Complete 30 dungeon runs,dungeon_runs,30,gems,50,300,TRUE,
+w2,Win 5 PvP raids,pvp_win,5,pvp_token,80,300,TRUE,
+w3,Upgrade 5 buildings,building_upgrade,5,gold,1000,300,TRUE,

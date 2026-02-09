@@ -1,0 +1,7 @@
+offer_id,offer_name,price_usd,contents,purchase_limit,duration_days,segment,notes
+starter_pack,Starter Pack,4.99,"gems:500; gold:50000; chest:silver; hero:rare",once,7,new_player,shown in first 72 hours
+monthly_pass,Monthly Pass,9.99,"gems:300 upfront; gems:900 over 30 days; stamina:200",monthly,30,all,daily claim required
+daily_deal,Daily Deal,0.99,"gems:120; gold:10000",daily,1,all,
+level_up_bundle,Level Up Bundle,14.99,"gems:1200; hero_xp:300; chest:gold",once per 10 levels,7,mid_game,trigger from level 10
+hero_bundle,Hero Bundle,19.99,"gems:1000; hero:epic; shard_token:200",once,14,collectors,
+vault_pack,Vault Pack,49.99,"gems:5000; gold:250000; chest:premium*2",weekly,7,high_spend,

@@ -1,0 +1,11 @@
+item_id,item_name,item_type,rarity,stack_size,source,base_value,use_effect,notes
+itm_hp_small,Small Healing Potion,consumable,Common,20,craft; dungeons,50,"Restore 20% HP",basic potion
+itm_hp_large,Large Healing Potion,consumable,Rare,10,craft; events,120,"Restore 60% HP",
+itm_stamina_snack,Stamina Snack,consumable,Common,10,quests; shop,80,"Restore 10 stamina",
+itm_revive_scroll,Revive Scroll,consumable,Epic,5,events; shop,300,"Revive one hero in battle",
+itm_wood_bundle,Wood Bundle,resource_pack,Common,50,shop; quests,40,"Adds 200 wood",
+itm_stone_bundle,Stone Bundle,resource_pack,Common,50,shop; quests,40,"Adds 200 stone",
+itm_iron_bundle,Iron Bundle,resource_pack,Rare,20,shop; dungeons,80,"Adds 120 iron",
+itm_hero_xp_tome,Hero XP Tome,consumable,Common,30,dungeons; quests,70,"Grants 200 hero XP",
+itm_hero_xp_grimoire,Hero XP Grimoire,consumable,Rare,10,events; shop,150,"Grants 800 hero XP",
+itm_shard_token_pack,Shard Token Pack,resource_pack,Rare,20,shop; events,140,"Adds 50 shard tokens",

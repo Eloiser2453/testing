@@ -1,0 +1,5 @@
+chest_id,chest_name,currency,price,pulls,pity_soft_start,pity_hard,pool_id,min_rarity,max_rarity,notes
+bronze_chest,Bronze Chest,gems,80,1,0,0,gacha_basic,Common,Epic,one free daily via cooldown
+silver_chest,Silver Chest,gems,260,1,30,60,gacha_basic,Rare,Epic,improved rare chance
+gold_chest,Gold Chest,gems,900,10,40,80,gacha_premium,Rare,Legendary,discounted 10-pull
+premium_chest,Premium Chest,gems,1200,10,30,70,gacha_premium,Rare,Legendary,seasonal banner
